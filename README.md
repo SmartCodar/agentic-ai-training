@@ -1,6 +1,8 @@
-# Python LLM Engineering Course 🚀
+# Agentic AI Development: Building Intelligent LLM Pipelines 🤖
 
-A comprehensive course on Large Language Models (LLMs) and AI Engineering with Python. From basics to advanced topics in 22 days.
+This comprehensive course takes you from Python fundamentals to building sophisticated agentic AI systems using modern LLM pipelines. Starting with structured backend engineering, you'll progress through web development, and then master the art of building autonomous AI agents that can think, reason, and act. Learn to create powerful generative pipelines that combine LLMs, vector stores, and intelligent routing to solve complex real-world problems.
+
+Over 90 days, you'll master the complete agentic AI stack - from core LLM concepts to advanced pipeline architectures. Build agents that can understand context, make decisions, and execute multi-step tasks autonomously. Create sophisticated AI pipelines that handle everything from data ingestion to reasoning to action generation. Whether you're developing autonomous AI assistants, multi-agent systems, or complex reasoning engines — this course equips you with the blueprint to architect next-generation AI applications.
 
 ## 📚 Course Overview
 
@@ -129,8 +131,8 @@ nltk>=3.6.0
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/python-llm-course.git
-cd python-llm-course
+git clone https://github.com/SmartCodar/agentic-ai-training.git
+cd agentic-ai-training
 ```
 
 2. Create virtual environment:
