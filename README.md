@@ -1,8 +1,8 @@
-# Agentic AI Development: Building Intelligent LLM Pipelines 🤖
+# Agentic AI Development: Mastering Autonomous Agents 🤖
 
-This comprehensive course takes you from Python fundamentals to building sophisticated agentic AI systems using modern LLM pipelines. Starting with structured backend engineering, you'll progress through web development, and then master the art of building autonomous AI agents that can think, reason, and act. Learn to create powerful generative pipelines that combine LLMs, vector stores, and intelligent routing to solve complex real-world problems.
+This comprehensive course takes you from Python fundamentals to building sophisticated autonomous agents powered by artificial intelligence. Starting with structured backend engineering, you'll progress through web development, and then master the art of creating AI agents that can perceive, reason, and act independently. Learn to develop intelligent agents that combine language understanding, decision-making capabilities, and strategic planning to solve complex real-world challenges.
 
-Over 90 days, you'll master the complete agentic AI stack - from core LLM concepts to advanced pipeline architectures. Build agents that can understand context, make decisions, and execute multi-step tasks autonomously. Create sophisticated AI pipelines that handle everything from data ingestion to reasoning to action generation. Whether you're developing autonomous AI assistants, multi-agent systems, or complex reasoning engines — this course equips you with the blueprint to architect next-generation AI applications.
+Over 90 days, you'll master the complete autonomous agent development lifecycle - from core AI concepts to advanced agent architectures. Build agents that can process information, form strategies, and execute complex tasks with minimal supervision. Create sophisticated agent systems that can learn from interactions, adapt to new situations, and collaborate with other agents and humans. Whether you're developing personal AI assistants, autonomous decision-making systems, or multi-agent collaboration frameworks — this course equips you with the blueprint to architect the next generation of intelligent autonomous systems.
 
 ## 📚 Course Overview
 
