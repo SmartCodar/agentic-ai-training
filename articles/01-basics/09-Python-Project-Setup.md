@@ -1,33 +1,138 @@
-# Day - 9 Python Project Setup and Best Practices
+# Day 9: Virtual Environments in Python
 
-## Overview
-This lesson covers essential project setup practices in Python, including virtual environments, dependency management, and version control with GitHub. You'll learn how to structure projects professionally and manage them effectively.
+## Introduction
+Virtual environments in Python help you:
+- Create isolated spaces for different projects
+- Avoid package version conflicts
+- Keep your system Python clean
+- Share project requirements easily
 
-## Learning Objectives
-- Master virtual environment creation and management
-- Understand dependency management with pip
-- Learn Git basics and GitHub workflow
-- Create professional project structures
-- Implement best practices for Python projects
+## ⏱️ Time Estimate
+- **Reading**: 20 minutes
+- **Setup**: 25 minutes
+- **Practice**: 30 minutes
 
-## Prerequisites
-- Understanding of Python fundamentals (variables, functions, OOP)
-- Knowledge of modules and packages
-- Python 3.x installed
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Create and activate virtual environments
+- Install packages in virtual environments
+- Manage project dependencies
+- Share your project with others
+
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
 - Basic command line knowledge
-- Completion of [07 - Testing and Debugging](07-Python-Testing-Debugging.md)
-- Completion of [08 - Functional Programming](08-Python-Functional-Programming.md)
-- Python 3.x installed on your computer
-- Git installed on your computer
+- Understanding of pip package manager
 
-## Time Estimate
-- Reading: 35 minutes
-- Practice: 55 minutes
-- Project Setup: 45 minutes
+## 🛠️ Setup Check
+Run this code to verify your Python installation:
+```python
+import sys
+import subprocess
+
+# Check Python version
+print(f"Python version: {sys.version_info.major}.{sys.version_info.minor}")
+
+# Check venv module
+try:
+    import venv
+    print("Virtual environment support: Available")
+except ImportError:
+    print("Virtual environment support: Not available")
+```
 
 ---
 
-## 1. Virtual Environments
+## 1. Creating a Simple Weather App with Virtual Environment
+
+### Step 1: Create and Activate Virtual Environment
+```bash
+# Create a new directory for our project
+mkdir weather_app
+cd weather_app
+
+# Create virtual environment
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Verify you're in the virtual environment
+python -c "import sys; print('Virtual env:', sys.prefix)"
+```
+
+### Step 2: Install Required Package
+```bash
+# Install requests package for API calls
+pip install requests
+
+# Save requirements
+pip freeze > requirements.txt
+```
+
+### Step 3: Create Weather App
+Create a file named `weather.py`:
+```python
+import requests
+from datetime import datetime
+
+def get_weather(city: str) -> dict:
+    """Get current weather for a city."""
+    API_KEY = "your-api-key"  # Get from OpenWeatherMap
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric"
+    
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        return {
+            'city': city,
+            'temperature': data['main']['temp'],
+            'description': data['weather'][0]['description'],
+            'time': datetime.now().strftime('%H:%M:%S')
+        }
+    else:
+        return {'error': 'City not found'}
+
+def main():
+    city = input('Enter city name: ')
+    weather = get_weather(city)
+    
+    if 'error' in weather:
+        print(weather['error'])
+    else:
+        print(f"\nWeather in {weather['city']}:")
+        print(f"Temperature: {weather['temperature']}°C")
+        print(f"Conditions: {weather['description']}")
+        print(f"Time: {weather['time']}")
+
+if __name__ == '__main__':
+    main()
+```
+
+### Step 4: Share Your Project
+```bash
+# Share requirements.txt with others
+cat requirements.txt
+# Output: requests==2.31.0
+
+# Others can recreate environment
+python -m venv venv
+venv\Scripts\activate  # or source venv/bin/activate on Unix
+pip install -r requirements.txt
+```
+
+### Project Structure
+```plaintext
+weather_app/
+├── venv/              # Virtual environment
+├── weather.py         # Main application
+└── requirements.txt   # Project dependencies
+```
+
+## 2. Virtual Environments
 
 ### Understanding Virtual Environments
 Virtual environments are isolated Python environments that allow you to:
@@ -333,3 +438,34 @@ def manage_project_dependencies():
     # Install from requirements
     pkg_manager.install_requirements(dev=True)
 ```
+
+## 6. Knowledge Check ✅
+
+1. What is a virtual environment and why do we need it?
+2. How do you create and activate a virtual environment?
+3. What happens when you activate a virtual environment?
+4. How do you install packages in a virtual environment?
+5. What is requirements.txt and how do you create it?
+6. How can others recreate your project environment?
+7. What should you do with virtual environment folders in version control?
+8. How do you deactivate a virtual environment?
+
+## 7. Summary
+
+### Key Takeaways
+- Virtual environments provide isolated Python workspaces
+- Use `python -m venv` to create environments
+- Activate environment before installing packages
+- Use requirements.txt to share dependencies
+- Never commit virtual environment folders to Git
+
+## 📚 Additional Resources
+- [Python venv documentation](https://docs.python.org/3/library/venv.html)
+- [Real Python - Virtual Environments](https://realpython.com/python-virtual-environments-a-primer/)
+- [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/)
+
+---
+
+> **Navigation**
+> - [← Python Functional Programming](08-Python-Functional-Programming.md)
+> - [Python Web Development →](10-Python-Web-Development.md)

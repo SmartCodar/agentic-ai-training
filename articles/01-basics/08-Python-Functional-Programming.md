@@ -1,25 +1,54 @@
-# Day - 8 Functional Programming in Python
+# Day 8: Functional Programming in Python
 
-## Overview
-This lesson explores functional programming concepts in Python, including lambda functions, decorators, and generators. You'll learn how to write more concise and efficient code using these powerful features, with practical examples from real-world scenarios.
+## Introduction
+Functional programming in Python enables you to:
+- Write more concise and expressive code
+- Create reusable and composable functions
+- Process data efficiently with built-in tools
+- Implement elegant solutions to complex problems
 
-## Learning Objectives
-- Master lambda functions for concise operations
-- Understand and create decorators
-- Implement generators for memory efficiency
-- Apply functional programming concepts
-- Use built-in functional tools (map, filter, reduce)
+## ⏱️ Time Estimate
+- **Reading**: 40 minutes
+- **Exercises**: 50 minutes
+- **Practice Project**: 45 minutes
 
-## Prerequisites
-- Understanding of Python variables and data types
-- Knowledge of flow control (if statements, loops)
-- Strong understanding of functions and their usage
-- Python 3.x installed on your computer
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Create and use lambda functions effectively
+- Build and apply function decorators
+- Implement memory-efficient generators
+- Use map, filter, and reduce operations
+- Apply functional programming patterns
+- Write pure functions and avoid side effects
 
-## Time Estimate
-- Reading: 40 minutes
-- Practice: 50 minutes
-- Assignments: 45 minutes
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
+- Code editor (VS Code recommended) with Python extension
+- Strong understanding of functions (Day 3)
+- Basic knowledge of error handling
+
+## 🛠️ Setup Check
+Run this code to verify your functional programming setup:
+```python
+from functools import reduce
+from typing import Callable
+
+# Test lambda function
+square = lambda x: x**2
+
+# Test map and filter
+numbers = [1, 2, 3, 4, 5]
+mapped = list(map(square, numbers))
+filtered = list(filter(lambda x: x % 2 == 0, numbers))
+
+# Test reduce
+sum_all = reduce(lambda x, y: x + y, numbers)
+
+print(f"Lambda function: square(5) = {square(5)}")
+print(f"Map result: {mapped}")
+print(f"Filter result: {filtered}")
+print(f"Reduce result: {sum_all}")
+```
 
 ---
 
@@ -389,21 +418,33 @@ demonstrate_functional_tools()
 3. Use generator expressions for simple cases
 4. Consider memory usage
 
-## Summary
+## 6. Knowledge Check ✅
+
+1. What are the key differences between lambda functions and regular functions?
+2. How do decorators modify function behavior and when should you use them?
+3. What are the benefits of using generators over lists?
+4. How do map, filter, and reduce functions work together?
+5. What makes a function "pure" and why is it important?
+6. When should you use list comprehensions vs map/filter?
+7. How do you handle errors in functional programming?
+8. What are the performance implications of functional programming?
+
+## 7. Summary
 
 ### Key Takeaways
-1. Lambda functions for quick, simple operations
-2. Decorators for modifying function behavior
-3. Generators for memory-efficient iteration
-4. Functional programming for cleaner code
+- Use lambda functions for simple, one-line operations
+- Apply decorators to modify function behavior cleanly
+- Implement generators for memory-efficient iteration
+- Choose appropriate functional tools (map, filter, reduce)
+- Write pure functions for better maintainability
 
-### What's Next
-- [Testing and Debugging](08-Python-Testing-Debugging.md)
-- Working with Databases
-- Web Development
+## 📚 Additional Resources
+- [Python Functional Programming HOWTO](https://docs.python.org/3/howto/functional.html)
+- [Real Python - Functional Programming](https://realpython.com/python-functional-programming/)
+- [Python Decorators Guide](https://realpython.com/primer-on-python-decorators/)
 
 ---
 
 > **Navigation**
-> - [← File Handling](06-Python-File-Handling.md)
-> - [Testing and Debugging →](08-Python-Testing-Debugging.md)
+> - [← Python File Handling](07-Python-File-Handling.md)
+> - [Python Project Setup →](09-Python-Project-Setup.md)

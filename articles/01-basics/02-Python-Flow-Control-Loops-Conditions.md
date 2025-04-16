@@ -1,53 +1,208 @@
 # Day 2 - Flow Control: If-Else, For Loop, While Loop
 
 ## Overview
-This lesson covers Python's flow control structures that allow you to make decisions and repeat actions in your programs. These concepts are fundamental to creating dynamic and responsive applications.
+Master Python's flow control structures to create dynamic and intelligent programs. Learn how to make decisions, iterate over data, and control program execution flow using Python's elegant syntax and powerful control structures.
 
-## Learning Objectives
-- Master conditional statements using if-else
-- Understand and implement different types of loops
-- Learn when to use for loops vs while loops
-- Apply flow control concepts in real-world scenarios
+## Theoretical Foundation
 
-## Prerequisites
-- Understanding of Python variables and data types
-- Basic operators and expressions in Python
-- Python 3.x installed on your computer
-- Basic command line knowledge
+### Understanding Flow Control
+Flow control is the cornerstone of programming logic, determining how a program executes instructions. In Python, flow control follows these key principles:
 
-## Time Estimate
-- Reading: 25 minutes
-- Practice: 45 minutes
-- Assignments: 35 minutes
+1. **Sequential Execution**: By default, code runs top to bottom
+2. **Conditional Execution**: Code runs based on conditions (if-else)
+3. **Iterative Execution**: Code repeats based on conditions (loops)
+4. **Jump Statements**: Code execution can be altered (break, continue)
 
----
+### Decision Making in Programming
+Programs need to make decisions based on conditions, just like humans do:
 
-## 1. Introduction
-Today we focus on **Decision Making** and **Loops** in Python:
-- How programs make choices (if-else)
-- How programs repeat actions (for-loop, while-loop)
+1. **Boolean Logic**: True/False evaluations
+2. **Comparison**: Testing relationships between values
+3. **Branching**: Taking different paths based on conditions
+4. **Pattern Matching**: Selecting actions based on data patterns (Python 3.10+)
 
-Flow control is the **backbone of programming logic**!
+### Iteration and Loops
+Loops automate repetitive tasks and process collections of data:
 
----
+1. **Counted Loops**: Known number of iterations (for loops)
+2. **Conditional Loops**: Unknown iterations (while loops)
+3. **Infinite Loops**: Continuous execution until interrupted
+4. **Nested Loops**: Loops within loops for complex patterns
 
-## 2. If-Else Statements
+## ⏱️ Time Estimate
+- **Reading**: 30 minutes
+- **Exercises**: 45 minutes
+- **Practice Project**: 30 minutes
 
-### Explanation
-- Allows decisions based on conditions.
-- Python uses indentation to define the block.
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Implement conditional logic using if-elif-else statements
+- Write efficient loops using for and while constructs
+- Use pattern matching for elegant control flow (Python 3.11+)
+- Apply loop control statements (break, continue, else)
+- Debug common flow control issues
 
-### Syntax
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
+- Understanding of Python variables and operators (Day 1)
+- VS Code with Python extension installed
+- Basic understanding of Boolean logic
+
+## 🛠️ Setup Check
+Run this code to verify your Python installation and features:
 ```python
-if condition:
-    # code block
-elif another_condition:
-    # code block
-else:
-    # code block
+import sys
+
+print(f"Python Version: {sys.version}")
+print(f"Pattern Matching Available: {sys.version_info >= (3, 10)}")
 ```
 
-### Real-world Examples
+---
+
+## 1. Conditional Statements
+
+### 1.1 Basic If-Else Statements
+```python
+# Simple if-else
+def check_age(age: int) -> str:
+    if age >= 18:
+        return "Adult"
+    else:
+        return "Minor"
+
+# Multiple conditions using elif
+def grade_score(score: int) -> str:
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    else:
+        return "F"
+
+# Nested if statements
+def validate_user(age: int, is_registered: bool) -> str:
+    if age >= 18:
+        if is_registered:
+            return "Access granted"
+        else:
+            return "Please register"
+    else:
+        return "Age restricted"
+```
+
+### 1.2 Switch-like Flow Control
+
+#### Traditional Dictionary Approach
+```python
+def get_day_type(day: str) -> str:
+    return {
+        'Monday': 'Workday',
+        'Tuesday': 'Workday',
+        'Wednesday': 'Workday',
+        'Thursday': 'Workday',
+        'Friday': 'Workday',
+        'Saturday': 'Weekend',
+        'Sunday': 'Weekend'
+    }.get(day, 'Invalid day')
+
+# With function callbacks
+def process_command(command: str, data: dict) -> str:
+    def create_item(): return f"Created {data.get('name', 'item')}"
+    def update_item(): return f"Updated {data.get('id', 'unknown')}"
+    def delete_item(): return f"Deleted {data.get('id', 'unknown')}"
+    
+    commands = {
+        'create': create_item,
+        'update': update_item,
+        'delete': delete_item
+    }
+    
+    action = commands.get(command.lower())
+    return action() if action else 'Invalid command'
+```
+
+#### Modern Pattern Matching (Python 3.10+)
+```python
+def analyze_data(data: object) -> str:
+    match data:
+        case int() | float() as num if num > 0:
+            return f"Positive number: {num}"
+        case str() as text if text.strip():
+            return f"Non-empty string: {text}"
+        case list() | tuple() as seq if seq:
+            return f"Non-empty sequence of length {len(seq)}"
+        case dict() as d if d:
+            return f"Dictionary with keys: {', '.join(d.keys())}"
+        case _:
+            return "Unhandled data type or empty value"
+
+# Enhanced switch with pattern matching
+def process_event(event: dict) -> str:
+    match event:
+        case {'type': 'user', 'action': 'login', 'id': id}:
+            return f"User {id} logged in"
+        case {'type': 'user', 'action': 'logout', 'id': id}:
+            return f"User {id} logged out"
+        case {'type': 'error', 'code': code, 'message': msg}:
+            return f"Error {code}: {msg}"
+        case {'type': 'system', **details}:
+            return f"System event with details: {details}"
+        case _:
+            return "Unknown event"
+
+# Example usage
+print(analyze_data(42))          # "Positive number: 42"
+print(analyze_data("Hello"))     # "Non-empty string: Hello"
+
+event = {'type': 'user', 'action': 'login', 'id': 'user123'}
+print(process_event(event))     # "User user123 logged in"
+```
+
+### 1.3 Advanced Conditionals
+```python
+# Walrus operator (Python 3.8+)
+def process_data(data: list) -> tuple:
+    if (n := len(data)) > 10:
+        return data[:10], n
+    return data, n
+
+# Multiple conditions with any/all
+def validate_password(password: str) -> bool:
+    checks = [
+        len(password) >= 8,
+        any(c.isupper() for c in password),
+        any(c.islower() for c in password),
+        any(c.isdigit() for c in password)
+    ]
+    return all(checks)
+
+# Ternary operator
+def get_status(is_active: bool) -> str:
+    return "Active" if is_active else "Inactive"
+```
+
+### 1.4 Best Practices
+```python
+# ✅ Use positive conditions when possible
+if is_valid:  # Better than: if is_valid == True
+    process()
+
+# ✅ Combine related conditions
+if 0 <= age <= 120:  # Better than: if age >= 0 and age <= 120
+    validate_age()
+
+# ✅ Use early returns for guard clauses
+def process_user(user: dict) -> str:
+    if not user:
+        return "Invalid user"
+    if not user.get('name'):
+        return "Name required"
+    
+    # Main processing here
+    return f"Processing user {user['name']}"
+```
 
 #### 1. User Authentication
 ```python
@@ -224,21 +379,170 @@ print(f"Long Word Percentage: {stats['long_word_percentage']:.1f}%")
 
 ---
 
-## 4. While Loops
+## 2. Loops and Iteration
 
-### Explanation
-- Repeats code **as long as condition is True**.
-- Caution: Make sure the loop eventually stops (update condition inside loop).
-
-### Syntax
+### 2.1 For Loops
 ```python
-while condition:
-    # code block
+# Basic for loop with range
+def generate_squares(n: int) -> list[int]:
+    return [i ** 2 for i in range(n)]
+
+# Iterating over sequences
+def process_items(items: list) -> None:
+    for index, item in enumerate(items):
+        print(f"Processing item {index + 1}: {item}")
+
+# Dictionary iteration
+def analyze_data(data: dict) -> dict:
+    summary = {
+        'total': 0,
+        'count': 0,
+        'categories': set()
+    }
+    
+    for category, values in data.items():
+        summary['categories'].add(category)
+        for value in values:
+            summary['total'] += value
+            summary['count'] += 1
+    
+    return summary
+
+# Comprehensions (modern Pythonic way)
+def process_numbers(numbers: list[int]) -> tuple[list, list, dict]:
+    # List comprehension
+    evens = [n for n in numbers if n % 2 == 0]
+    
+    # Set comprehension
+    unique_squares = {n ** 2 for n in numbers}
+    
+    # Dict comprehension
+    number_map = {n: bin(n) for n in numbers}
+    
+    return evens, list(unique_squares), number_map
 ```
 
-### Real-world Applications
+### 2.2 While Loops
+```python
+# Basic while loop with counter
+def countdown(start: int) -> None:
+    while start > 0:
+        print(f"T-minus {start}...")
+        start -= 1
+    print("Liftoff!")
 
-#### 1. Password Retry System
+# While loop with dynamic condition
+def find_number(target: int, max_attempts: int = 5) -> tuple[bool, int]:
+    import random
+    attempts = 0
+    
+    while attempts < max_attempts:
+        guess = random.randint(1, 100)
+        attempts += 1
+        
+        if guess == target:
+            return True, attempts
+    
+    return False, attempts
+
+# Input validation with while
+def get_valid_age() -> int:
+    while True:
+        try:
+            age = int(input("Enter your age: "))
+            if 0 <= age <= 120:
+                return age
+            print("Age must be between 0 and 120")
+        except ValueError:
+            print("Please enter a valid number")
+```
+
+### 2.3 Loop Control and Best Practices
+
+#### Control Flow Statements
+```python
+# Using break and continue
+def process_numbers(numbers: list[int]) -> tuple[list[int], list[int]]:
+    evens = []
+    odds = []
+    
+    for num in numbers:
+        if num == 0:
+            break  # Stop processing if we hit zero
+        
+        if num % 2 == 0:
+            evens.append(num)
+            continue  # Skip to next number
+        
+        odds.append(num)
+    
+    return evens, odds
+
+# Loop with else clause
+def find_element(items: list, target: any) -> int:
+    for index, item in enumerate(items):
+        if item == target:
+            break
+    else:  # Executed if no break occurs
+        return -1
+    return index
+```
+
+#### Best Practices
+```python
+# ✅ Use enumerate for counter
+for i, item in enumerate(items, 1):  # Start count from 1
+    print(f"Item {i}: {item}")
+
+# ✅ Use zip for parallel iteration
+for name, score in zip(names, scores):
+    print(f"{name}: {score}")
+
+# ✅ Use list comprehension for simple transformations
+squares = [x**2 for x in range(10)]
+
+# ✅ Use generator expressions for large sequences
+sum(x**2 for x in range(1_000_000))  # Memory efficient
+
+# ✅ Use dict/set comprehension when appropriate
+name_lengths = {name: len(name) for name in names}
+unique_letters = {char.lower() for char in text}
+```
+
+#### Common Pitfalls
+```python
+# ❌ Don't modify list while iterating
+# Bad:
+for item in items:
+    if condition(item):
+        items.remove(item)  # Can skip items!
+
+# ✅ Good:
+items = [item for item in items if not condition(item)]
+
+# ❌ Don't use while True without break condition
+# Bad:
+while True:
+    process_data()
+
+# ✅ Good:
+while True:
+    if not process_data():
+        break
+
+# ❌ Don't use indices unless necessary
+# Bad:
+for i in range(len(items)):
+    print(items[i])
+
+# ✅ Good:
+for item in items:
+    print(item)
+```
+
+### 2.4 Real-World Examples
+
+#### 1. Data Processing Pipeline
 ```python
 def login_system():
     max_attempts = 3
@@ -661,6 +965,34 @@ def number_guessing_game():
 
 ---
 
+## 📚 Additional Resources
+- [Python Control Flow Documentation](https://docs.python.org/3/tutorial/controlflow.html)
+- [PEP 634 – Structural Pattern Matching](https://peps.python.org/pep-0634/)
+- [Python Tips: Loop Better](https://book.pythontips.com/en/latest/for_-_else.html)
+- [Real Python: Python For Loops](https://realpython.com/python-for-loop/)
+
+## ✅ Knowledge Check
+1. What is the difference between `break` and `continue` statements?
+2. When should you use a `while` loop instead of a `for` loop?
+3. How does pattern matching improve code readability compared to if-elif chains?
+4. What are the benefits of using list comprehensions over traditional for loops?
+5. How does the loop `else` clause work and when is it useful?
+
+## 🔍 Common Issues and Solutions
+| Issue | Solution |
+|-------|----------|
+| Infinite Loop | Always ensure loop condition can become False |
+| List Modification | Use list comprehension or iterate over copy |
+| Index Errors | Use enumerate instead of manual indexing |
+| Memory Issues | Use generators for large sequences |
+
+## 📝 Summary
+- Flow control enables dynamic program behavior through conditions and loops
+- Pattern matching (Python 3.10+) provides elegant handling of complex conditions
+- Modern Python features like walrus operator and f-strings improve code clarity
+- Best practices focus on readability and performance
+- Loop control statements provide fine-grained iteration control
+
 > **Navigation**
-> - [← Day 1 - Python Basics](Day-1.md)
-> - [Day 3 - Functions and Modular Programming →](Day-3.md)
+> - [← Variables and Data Types](01-Python-Basics-Variables-Types-Operators.md)
+> - [Functions and Modularity →](03-Python-Functions-Modular-Programming.md)

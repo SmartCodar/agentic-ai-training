@@ -316,6 +316,23 @@ class Contact(BaseModel, ValidationMixin):
 3. Plan for schema evolution
 4. Keep models organized and maintainable
 
+## ✅ Knowledge Check
+1. What is the purpose of Pydantic and how does it differ from dataclasses?
+2. How do you create custom validators in Pydantic?
+3. What are the benefits of using Field() in model definitions?
+4. How do you handle nested models and relationships?
+5. What is the difference between Optional and Union types?
+6. How do you implement custom serialization/deserialization?
+7. What are Pydantic's best practices for model design?
+8. How do you use Pydantic with FastAPI for request/response validation?
+
+## 📚 Additional Resources
+- [Pydantic Documentation](https://docs.pydantic.dev/)
+- [Pydantic Field Types](https://docs.pydantic.dev/usage/types/)
+- [Custom Validators](https://docs.pydantic.dev/usage/validators/)
+- [Model Config](https://docs.pydantic.dev/usage/model_config/)
+- [Schema Generation](https://docs.pydantic.dev/usage/schema/)
+
 ---
 
 > **Navigation**

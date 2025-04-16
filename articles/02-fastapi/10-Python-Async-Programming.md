@@ -19,12 +19,41 @@ This lesson explores asynchronous programming in Python using async/await and ev
 - Completion of [07 - Testing and Debugging](../01-basics/07-Python-Testing-Debugging.md)
 - Completion of [08 - Functional Programming](../01-basics/08-Python-Functional-Programming.md)
 - Completion of [09 - Project Setup](../01-basics/09-Python-Project-Setup.md)
-- Python 3.7+ installed (for full async support)
 
 ## Time Estimate
 - Reading: 45 minutes
 - Practice: 60 minutes
 - Exercises: 45 minutes
+
+## ⚙️ Setup Check
+```python
+import sys
+import asyncio
+
+async def check_async_support():
+    try:
+        # Check Python version
+        print(f"Python version: {sys.version_info.major}.{sys.version_info.minor}")
+        if sys.version_info < (3, 7):
+            print("Warning: Python 3.7+ recommended for full async support")
+        
+        # Verify asyncio
+        await asyncio.sleep(0.1)
+        print("Asyncio working correctly")
+        
+        # Check event loop
+        loop = asyncio.get_running_loop()
+        print("Event loop available")
+        
+        return True
+    except Exception as e:
+        print(f"Setup check failed: {e}")
+        return False
+
+# Run setup check
+if __name__ == "__main__":
+    asyncio.run(check_async_support())
+```
 
 ---
 
@@ -267,16 +296,71 @@ async def safe_operation():
 
 ## Summary
 
+## 5. Practical Exercises 🔨
+
+### Exercise 1: Async Web Scraper
+Create a simple web scraper that fetches titles from multiple web pages concurrently:
+```python
+async def fetch_page_title(url: str) -> str:
+    """Fetch and extract title from a webpage."""
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            html = await response.text()
+            # Extract title using string operations
+            title_start = html.find('<title>') + 7
+            title_end = html.find('</title>')
+            return html[title_start:title_end]
+```
+
+### Exercise 2: File Processor
+Implement an async file processor that reads multiple files concurrently:
+```python
+async def process_file(path: str) -> dict:
+    """Process a file asynchronously."""
+    async with aiofiles.open(path, 'r') as file:
+        content = await file.read()
+        return {
+            'path': path,
+            'size': len(content),
+            'lines': len(content.splitlines())
+        }
+```
+
+### Exercise 3: Database Client
+Create an async database client using aiosqlite:
+```python
+async def query_db(query: str) -> List[dict]:
+    """Execute a database query asynchronously."""
+    async with aiosqlite.connect('example.db') as db:
+        async with db.execute(query) as cursor:
+            rows = await cursor.fetchall()
+            return rows
+```
+
+## 6. Knowledge Check ✅
+
+1. What is asynchronous programming and how does it differ from synchronous code?
+2. Explain the role of the event loop in async programming.
+3. What is the purpose of `await` and when should you use it?
+4. How do you run multiple async tasks concurrently?
+5. What are async context managers and when should you use them?
+6. How do you handle errors in async code?
+7. What types of operations are best suited for async programming?
+8. How do you convert a synchronous program to use async/await?
+
+## 7. Summary
+
 ### Key Takeaways
 1. Async programming improves application efficiency
 2. Event loops manage concurrent operations
 3. Async context managers handle resource lifecycle
 4. Best practices guide when to use async
 
-### What's Next
-- [Web Development with FastAPI](12-Python-FastAPI.md)
-- Database Operations with asyncio
-- Advanced Concurrency Patterns
+## 📚 Additional Resources
+- [Python asyncio Documentation](https://docs.python.org/3/library/asyncio.html)
+- [Real Python - Async IO Guide](https://realpython.com/async-io-python/)
+- [AsyncIO for the Working Python Developer](https://www.youtube.com/watch?v=iG6fr81xHKA)
+- [Python Async Design Patterns](https://docs.python.org/3/library/asyncio-dev.html)
 
 ---
 

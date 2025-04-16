@@ -421,6 +421,48 @@ async def create_order(
 4. Document your API endpoints
 5. Use response models for type safety
 
+## ⚙️ Setup Check
+```python
+import sys
+import fastapi
+
+def check_setup():
+    # Check Python version
+    print(f"Python version: {sys.version_info.major}.{sys.version_info.minor}")
+    if sys.version_info < (3, 11):
+        print("Error: Python 3.11+ required")
+        return False
+        
+    # Check FastAPI
+    print(f"FastAPI version: {fastapi.__version__}")
+    
+    # Test route parameters
+    from fastapi import Path, Query
+    print("Route parameter tools available")
+    
+    return True
+
+if __name__ == "__main__":
+    check_setup()
+```
+
+## ✅ Knowledge Check
+1. What is the difference between path parameters and query parameters?
+2. How do you implement optional path parameters?
+3. What are the benefits of using Pydantic models for request bodies?
+4. How do you handle file uploads in FastAPI?
+5. What is the purpose of response_model in route decorators?
+6. How do you implement proper error handling in routes?
+7. What are the best practices for route organization?
+8. How do you use dependency injection in routes?
+
+## 📚 Additional Resources
+- [FastAPI Path Parameters](https://fastapi.tiangolo.com/tutorial/path-params/)
+- [Query Parameters](https://fastapi.tiangolo.com/tutorial/query-params/)
+- [Request Files](https://fastapi.tiangolo.com/tutorial/request-files/)
+- [Dependencies in Path Operations](https://fastapi.tiangolo.com/tutorial/dependencies/)
+- [Response Models](https://fastapi.tiangolo.com/tutorial/response-model/)
+
 ---
 
 > **Navigation**

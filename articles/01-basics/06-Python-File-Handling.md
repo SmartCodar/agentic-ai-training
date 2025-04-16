@@ -1,25 +1,47 @@
-# Day 6 - File Handling in Python
+# Day 6: File Handling in Python
 
-## Overview
-This lesson covers file handling operations in Python, including working with text files, JSON data, CSV files, and binary files. You'll learn how to read, write, and manipulate different file formats efficiently and safely.
+## Introduction
+File handling in Python enables you to:
+- Read and write data persistently
+- Process different file formats (text, JSON, CSV, binary)
+- Handle file operations safely and efficiently
+- Manage file system operations
 
-## Learning Objectives
-- Master file operations (read, write, append)
-- Work with different file formats (text, JSON, CSV)
-- Handle file paths and directories
-- Implement error handling for file operations
-- Use context managers (`with` statement)
+## ⏱️ Time Estimate
+- **Reading**: 35 minutes
+- **Exercises**: 45 minutes
+- **Practice Project**: 40 minutes
 
-## Prerequisites
-- Understanding of Python variables and data types
-- Knowledge of flow control (if statements, loops)
-- Understanding of functions and their usage
-- Python 3.x installed on your computer
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Implement basic file operations (read, write, append)
+- Work with different file formats effectively
+- Use context managers for safe file handling
+- Handle file paths and directories cross-platform
+- Implement proper error handling for file operations
+- Process large files efficiently
 
-## Time Estimate
-- Reading: 35 minutes
-- Practice: 45 minutes
-- Assignments: 40 minutes
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
+- Code editor (VS Code recommended) with Python extension
+- Understanding of functions and error handling
+- Basic knowledge of data structures
+
+## 🛠️ Setup Check
+Run this code to verify your file handling setup:
+```python
+from pathlib import Path
+
+test_file = Path('test.txt')
+with open(test_file, 'w') as f:
+    f.write('File handling ready!')
+    
+with open(test_file, 'r') as f:
+    content = f.read()
+    print(f"File operations working: {content}")
+
+test_file.unlink()  # Clean up
+```
 
 ---
 
@@ -411,21 +433,33 @@ def demonstrate_safe_operations():
 demonstrate_safe_operations()
 ```
 
-## Summary
+## 6. Knowledge Check ✅
 
-### Key Points
-1. Always use context managers (`with` statement)
-2. Handle file operations errors appropriately
-3. Use appropriate file modes and encodings
-4. Consider performance for large files
-5. Keep backups for important operations
+1. What is the difference between 'r', 'w', and 'a' file modes?
+2. Why should you use context managers (`with` statement) for file operations?
+3. How do you handle binary files differently from text files?
+4. What are the advantages of using `pathlib` over string paths?
+5. How do you efficiently process large files without loading them entirely into memory?
+6. What is the difference between `read()`, `readline()`, and `readlines()`?
+7. How do you handle file encoding issues?
+8. What are the best practices for error handling in file operations?
 
-### What's Next
-- [Testing and Debugging](06-Python-Testing-Debugging.md)
-- [Web Development](07-Python-Web-Development.md)
+## 7. Summary
+
+### Key Takeaways
+- Always use context managers for safe file handling
+- Choose appropriate file modes and encodings
+- Implement proper error handling
+- Use pathlib for cross-platform compatibility
+- Consider memory efficiency for large files
+
+## 📚 Additional Resources
+- [Python File Handling Documentation](https://docs.python.org/3/tutorial/inputoutput.html)
+- [Real Python - Working with Files](https://realpython.com/working-with-files-in-python/)
+- [Python Pathlib Guide](https://realpython.com/python-pathlib/)
 
 ---
 
 > **Navigation**
-> - [← Testing and Debugging](06-Python-Testing-Debugging.md)
-> - [Web Development →](07-Python-Web-Development.md)
+> - [← Python Object-Oriented Programming](05-Python-OOP.md)
+> - [Python Testing and Debugging →](07-Python-Testing-Debugging.md)

@@ -1,26 +1,48 @@
-# Day - 7 Testing and Debugging in Python
+# Day 7: Testing and Debugging in Python
 
-## Overview
-This lesson covers essential testing and debugging techniques in Python. You'll learn how to write and run tests, debug code effectively, handle exceptions, and use logging for better error tracking. These skills are crucial for developing reliable and maintainable software.
+## Introduction
+Testing and debugging in Python enables you to:
+- Write reliable and maintainable code
+- Catch and fix bugs effectively
+- Ensure code quality through automated testing
+- Track and resolve issues systematically
 
-## Learning Objectives
-- Master unit testing with pytest
-- Understand debugging techniques and tools
-- Learn effective error handling
-- Implement logging for better debugging
-- Practice test-driven development (TDD)
+## ⏱️ Time Estimate
+- **Reading**: 35 minutes
+- **Exercises**: 55 minutes
+- **Practice Project**: 45 minutes
 
-## Prerequisites
-- Understanding of Python variables and data types
-- Knowledge of flow control (if statements, loops)
-- Understanding of functions and their usage
-- Familiarity with Python modules and imports
-- Python 3.x installed on your computer
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Write and run unit tests using pytest
+- Debug code using various Python tools
+- Implement effective error handling strategies
+- Use logging for better issue tracking
+- Apply test-driven development principles
+- Profile code for performance issues
 
-## Time Estimate
-- Reading: 35 minutes
-- Practice: 55 minutes
-- Assignments: 45 minutes
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
+- Code editor (VS Code recommended) with Python extension
+- Understanding of functions and OOP concepts
+- Basic knowledge of exceptions and errors
+
+## 🛠️ Setup Check
+Run this code to verify your testing environment:
+```python
+import pytest
+import logging
+import pdb
+
+def test_setup():
+    assert True, "pytest is working!"
+
+logging.basicConfig(level=logging.INFO)
+logging.info("Logging is configured!")
+
+print(f"Python debugger available: {hasattr(pdb, 'set_trace')}")
+print(f"Pytest version: {pytest.__version__}")
+```
 
 ---
 
@@ -384,22 +406,33 @@ class TestEcommerceSystem:
 - Fail fast and explicitly
 - Don't catch generic exceptions
 
-## 8. Summary
+## 6. Knowledge Check ✅
+
+1. What are the key differences between unit tests and integration tests?
+2. How do you use pytest fixtures and why are they useful?
+3. What debugging tools are available in Python and when should you use each?
+4. How do you implement effective error handling in Python?
+5. What are the key components of a good logging strategy?
+6. How does test-driven development (TDD) improve code quality?
+7. What are mocks and when should you use them in testing?
+8. How do you profile Python code for performance issues?
+
+## 7. Summary
 
 ### Key Takeaways
-- Testing ensures code reliability
-- Debugging helps find and fix issues
-- Proper error handling improves robustness
-- Logging aids in troubleshooting
-- TDD leads to better design
+- Write tests before implementing features (TDD)
+- Use appropriate testing tools and frameworks
+- Implement comprehensive error handling
+- Utilize logging for better debugging
+- Profile code to identify performance issues
 
-### What's Next
-- Web Development with Python
-- Working with Databases
-- API Development
+## 📚 Additional Resources
+- [Python Testing Documentation](https://docs.pytest.org/)
+- [Real Python - Testing Guide](https://realpython.com/python-testing/)
+- [Python Debugging Tips](https://realpython.com/python-debugging-pdb/)
 
 ---
 
 > **Navigation**
-> - [← Object-Oriented Programming](05-Python-OOP.md)
-> - [Web Development →](07-Python-Web-Development.md)
+> - [← Python File Handling](06-Python-File-Handling.md)
+> - [Python Web Development →](08-Python-Web-Development.md)

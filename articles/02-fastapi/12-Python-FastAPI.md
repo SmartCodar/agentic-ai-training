@@ -19,7 +19,7 @@ This lesson teaches how to build production-ready APIs using FastAPI. You'll lea
 - Basic command line knowledge
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
 - pip (Python package installer)
 - Basic understanding of HTTP and REST APIs
 - Familiarity with async/await syntax
@@ -29,6 +29,56 @@ This lesson teaches how to build production-ready APIs using FastAPI. You'll lea
 - Reading: 45 minutes
 - Practice: 60 minutes
 - Project: 90 minutes
+
+## ⚙️ Setup Check
+```python
+import sys
+import asyncio
+from typing import Dict
+
+async def check_fastapi_setup():
+    try:
+        # Check Python version
+        print(f"Python version: {sys.version_info.major}.{sys.version_info.minor}")
+        if sys.version_info < (3, 11):
+            print("Error: Python 3.11+ required")
+            return False
+            
+        # Import and check FastAPI
+        import fastapi
+        print(f"FastAPI version: {fastapi.__version__}")
+        
+        # Check Uvicorn
+        import uvicorn
+        print(f"Uvicorn version: {uvicorn.__version__}")
+        
+        # Check Pydantic
+        import pydantic
+        print(f"Pydantic version: {pydantic.__version__}")
+        
+        # Create test app
+        app = fastapi.FastAPI(title="Setup Test")
+        
+        @app.get("/")
+        async def root() -> Dict[str, str]:
+            return {"status": "ok"}
+            
+        print("FastAPI test app created successfully")
+        return True
+        
+    except ImportError as e:
+        print(f"Missing required package: {e}")
+        print("Please install requirements:")
+        print("pip install fastapi uvicorn[standard] pydantic")
+        return False
+    except Exception as e:
+        print(f"Setup check failed: {e}")
+        return False
+
+# Run setup check
+if __name__ == "__main__":
+    asyncio.run(check_fastapi_setup())
+```
 
 ---
 
@@ -300,6 +350,57 @@ from ...core.security import create_access_token
 from ...services.user_service import UserService
 from ...schemas.schemas import Token
 from ...core.config import settings
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+@app.post("/token")
+async def login(form_data: OAuth2PasswordRequestForm = Depends()) -> Token:
+    # Add implementation
+    pass
+```
+
+### Exercise 3: Database Integration
+Connect to a database using SQLAlchemy:
+```python
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy.future import select
+
+async def get_user(db: AsyncSession, user_id: int) -> Optional[User]:
+    # Add implementation
+    pass
+```
+
+## 7. Knowledge Check ✅
+
+1. What are the key features of FastAPI?
+2. How do you implement path parameters and query parameters?
+3. What is dependency injection and how is it used in FastAPI?
+4. How do you handle authentication in FastAPI?
+5. What is Pydantic and how does it help with data validation?
+6. How do you implement database operations with FastAPI?
+7. What are FastAPI's best practices for error handling?
+8. How do you document APIs using FastAPI's automatic documentation?
+
+## 8. Summary
+
+### Key Takeaways
+1. FastAPI provides modern, fast API development
+2. Type hints enable automatic validation
+3. Async support improves performance
+4. Built-in documentation with OpenAPI
+5. Security features are production-ready
+
+## 📚 Additional Resources
+- [FastAPI Official Documentation](https://fastapi.tiangolo.com/)
+- [FastAPI Best Practices](https://fastapi.tiangolo.com/advanced/)
+- [Real Python - FastAPI Tutorial](https://realpython.com/fastapi-python-web-apis/)
+- [Async Database Operations](https://fastapi.tiangolo.com/advanced/async-sql-databases/)
+
+---
+
+> **Navigation**
+> - [← Aiohttp Client](11-Python-Aiohttp-Client.md)
+> - [FastAPI Database →](13-Python-FastAPI-Database.md)
 from ...core.deps import get_db
 
 router = APIRouter()
@@ -460,18 +561,32 @@ curl -X POST "http://localhost:8000/api/v1/users/me/products" \
 3. Use dependency injection
 4. Keep endpoints thin
 
-## Summary
+## 9. Knowledge Check ✅
+
+1. What are the key features of FastAPI that make it different from other frameworks?
+2. How do you implement path parameters and query parameters in FastAPI?
+3. What is dependency injection and how is it used in FastAPI?
+4. How do you handle authentication and authorization?
+5. What is Pydantic and how does it help with data validation?
+6. How do you implement proper error handling in FastAPI?
+7. What are the best practices for organizing a FastAPI project?
+8. How do you document your APIs using FastAPI's automatic documentation?
+
+## 10. Summary
 
 ### Key Takeaways
 1. FastAPI provides a modern, fast framework for APIs
 2. Type hints and validation improve reliability
 3. Proper project structure is crucial
 4. Security must be a priority
+5. Documentation is automated and comprehensive
 
-### What's Next
-- [Database Integration](13-Python-Database.md)
-- WebSocket Implementation
-- Advanced Security Features
+## 📚 Additional Resources
+- [FastAPI Official Documentation](https://fastapi.tiangolo.com/)
+- [FastAPI Best Practices](https://fastapi.tiangolo.com/advanced/)
+- [Real Python - FastAPI Tutorial](https://realpython.com/fastapi-python-web-apis/)
+- [Async Database Operations](https://fastapi.tiangolo.com/advanced/async-sql-databases/)
+- [Security Best Practices](https://fastapi.tiangolo.com/tutorial/security/)
 
 ---
 

@@ -1,26 +1,41 @@
-# Day 5 - Object-Oriented Programming in Python
+# Day 5: Object-Oriented Programming in Python
 
-## Overview
-This lesson introduces Object-Oriented Programming (OOP) in Python, teaching you how to create and use classes, objects, and implement key OOP concepts like inheritance and polymorphism. You'll learn how to structure your code using objects to model real-world entities and relationships.
+## Introduction
+Object-Oriented Programming (OOP) enables:
+- Modeling real-world entities as code
+- Creating reusable and maintainable software
+- Building complex systems from simple objects
+- Implementing design patterns effectively
 
-## Learning Objectives
-- Understand OOP fundamentals and class creation
-- Master inheritance and polymorphism
-- Learn encapsulation and abstraction
-- Implement class methods and properties
-- Work with class relationships
+## ⏱️ Time Estimate
+- **Reading**: 40 minutes
+- **Exercises**: 50 minutes
+- **Practice Project**: 45 minutes
 
-## Prerequisites
-- Understanding of Python variables and data types
-- Knowledge of flow control (if statements, loops)
-- Understanding of functions and their usage
-- Familiarity with Python modules and imports
-- Python 3.x installed on your computer
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Create classes and objects with proper attributes and methods
+- Implement inheritance hierarchies and method overriding
+- Apply encapsulation principles using access modifiers
+- Use polymorphism to write flexible and extensible code
+- Design class relationships (composition vs inheritance)
+- Implement properties and class decorators
 
-## Time Estimate
-- Reading: 40 minutes
-- Practice: 50 minutes
-- Assignments: 45 minutes
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
+- Code editor (VS Code recommended) with Python extension
+- Understanding of functions and modules
+- Basic error handling knowledge
+
+## 🛠️ Setup Check
+Run this code to verify your Python class support:
+```python
+class TestClass:
+    def __init__(self):
+        self.message = "OOP Ready!"
+
+print(f"Python {__import__('sys').version_info[:2]} supports classes: {TestClass().message}")
+```
 
 ---
 
@@ -899,22 +914,33 @@ def test_ecommerce_system():
 test_ecommerce_system()
 ```
 
+## 6. Knowledge Check ✅
+
+1. What is the difference between a class and an object?
+2. How does inheritance promote code reuse?
+3. When should you use class methods vs instance methods?
+4. What is the purpose of the `@property` decorator?
+5. How does encapsulation help in maintaining code?
+6. What are the benefits of using abstract base classes?
+7. How do you implement method overriding in Python?
+8. What is the role of the `super()` function?
+
 ## 7. Summary
 
 ### Key Takeaways
-- OOP helps organize code into reusable, maintainable classes
-- Inheritance enables code reuse and hierarchical relationships
-- Encapsulation protects data and implementation details
-- Polymorphism allows flexible behavior through interfaces
-- Properties and decorators enhance class functionality
+- Classes provide blueprints for creating objects
+- Inheritance enables code reuse and extensibility
+- Encapsulation protects data and implementation
+- Polymorphism allows flexible behavior
+- Properties and decorators enhance class interfaces
 
-### What's Next
-- Testing and Debugging Python Code
-- Web Development with Python
-- Working with Databases
+## 📚 Additional Resources
+- [Python OOP Documentation](https://docs.python.org/3/tutorial/classes.html)
+- [Real Python - OOP in Python](https://realpython.com/python3-object-oriented-programming/)
+- [Python OOP Cheat Sheet](https://www.pythoncheatsheet.org/cheatsheet/object-oriented-python)
 
 ---
 
 > **Navigation**
 > - [← Python Modules and Packages](04-Python-Modules-Packages.md)
-> - [Testing and Debugging →](06-Python-Testing-Debugging.md)
+> - [Python Testing and Debugging →](06-Python-Testing-Debugging.md)

@@ -22,6 +22,38 @@ This lesson explores aiohttp, a powerful asynchronous HTTP client/server framewo
 - Practice: 60 minutes
 - Projects: 50 minutes
 
+## ⚙️ Setup Check
+```python
+import sys
+import asyncio
+import aiohttp
+
+async def check_aiohttp_setup():
+    try:
+        # Check Python version
+        print(f"Python version: {sys.version_info.major}.{sys.version_info.minor}")
+        if sys.version_info < (3, 7):
+            print("Warning: Python 3.7+ recommended for full async support")
+        
+        # Verify aiohttp
+        print(f"aiohttp version: {aiohttp.__version__}")
+        
+        # Test basic request
+        async with aiohttp.ClientSession() as session:
+            async with session.get('https://httpbin.org/get') as response:
+                print(f"Test request status: {response.status}")
+                print("aiohttp working correctly")
+        
+        return True
+    except Exception as e:
+        print(f"Setup check failed: {e}")
+        return False
+
+# Run setup check
+if __name__ == "__main__":
+    asyncio.run(check_aiohttp_setup())
+```
+
 ---
 
 ## 1. Getting Started with Aiohttp
@@ -408,7 +440,55 @@ if __name__ == "__main__":
 3. Handle concurrent requests
 4. Monitor memory usage
 
-## Summary
+## 6. Practical Exercises 🔨
+
+### Exercise 1: REST API Client
+Create a client for a REST API with rate limiting and error handling:
+```python
+async def fetch_users(api_client: AsyncAPIClient, page: int = 1) -> List[dict]:
+    """Fetch users with pagination."""
+    try:
+        response = await api_client.get(f'/users?page={page}')
+        return response.data['users']
+    except aiohttp.ClientError as e:
+        logging.error(f"Failed to fetch users: {e}")
+        return []
+```
+
+### Exercise 2: Parallel Web Crawler
+Implement a parallel web crawler with depth limiting:
+```python
+async def crawl_website(start_url: str, max_depth: int = 2) -> Dict[str, str]:
+    """Crawl website and collect page titles."""
+    async with AsyncWebScraper(start_url, max_depth) as scraper:
+        pages = await scraper.crawl()
+        return {page.url: page.title for page in pages}
+```
+
+### Exercise 3: Real-time Data Monitor
+Build a client that monitors real-time data streams:
+```python
+async def monitor_stream(websocket_url: str, timeout: int = 30):
+    """Monitor real-time data stream."""
+    async with aiohttp.ClientSession() as session:
+        async with session.ws_connect(websocket_url) as ws:
+            async for msg in ws:
+                if msg.type == aiohttp.WSMsgType.TEXT:
+                    print(f"Received: {msg.data}")
+```
+
+## 7. Knowledge Check ✅
+
+1. What are the key differences between aiohttp and requests?
+2. How do you manage sessions effectively in aiohttp?
+3. What is the purpose of ClientSession in aiohttp?
+4. How do you handle timeouts and retries?
+5. What are the best practices for rate limiting?
+6. How do you implement parallel requests safely?
+7. What is the role of connection pooling?
+8. How do you handle WebSocket connections in aiohttp?
+
+## 8. Summary
 
 ### Key Takeaways
 1. Aiohttp provides powerful async HTTP capabilities
@@ -416,10 +496,11 @@ if __name__ == "__main__":
 3. Error handling and rate limiting are essential
 4. Concurrent requests need careful management
 
-### What's Next
-- [FastAPI Development](12-Python-FastAPI.md)
-- WebSocket Programming
-- Advanced HTTP Protocols
+## 📚 Additional Resources
+- [Aiohttp Official Documentation](https://docs.aiohttp.org/)
+- [Real Python - Async HTTP with Aiohttp](https://realpython.com/async-io-python/#the-asyncio-package-and-async-await-syntax)
+- [Aiohttp Best Practices](https://docs.aiohttp.org/en/stable/client_quickstart.html)
+- [Advanced Aiohttp Usage](https://docs.aiohttp.org/en/stable/client_advanced.html)
 
 ---
 
