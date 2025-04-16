@@ -12,22 +12,11 @@ Learn how to create professional API endpoints using FastAPI's powerful routing 
 - Use dependency injection in routes
 
 ## Prerequisites
-- Completion of [01 - Python Basics](../01-basics/01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [02 - Flow Control](../01-basics/02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [03 - Functions](../01-basics/03-Python-Functions-Modular-Programming.md)
-- Completion of [04 - Modules and Packages](../01-basics/04-Python-Modules-Packages.md)
-- Completion of [05 - Object-Oriented Programming](../01-basics/05-Python-OOP.md)
-- Completion of [06 - File Handling](../01-basics/06-Python-File-Handling.md)
-- Completion of [07 - Testing and Debugging](../01-basics/07-Python-Testing-Debugging.md)
-- Completion of [08 - Functional Programming](../01-basics/08-Python-Functional-Programming.md)
-- Completion of [09 - Project Setup](../01-basics/09-Python-Project-Setup.md)
-- Completion of [10 - Async Programming](10-Python-Async-Programming.md)
-- Completion of [11 - Aiohttp Client](11-Python-Aiohttp-Client.md)
-- Completion of [12 - FastAPI Basics](12-Python-FastAPI.md)
-
-### Technical Requirements
-- Python 3.7+
-- FastAPI installed
+- Understanding of FastAPI basics
+- Knowledge of HTTP methods (GET, POST, etc.)
+- Familiarity with API endpoints and routing
+- Understanding of request/response cycles
+- Python 3.7+ installed
 - Understanding of HTTP methods (GET, POST, PUT, DELETE)
 - Knowledge of path and query parameters
 - Basic understanding of request/response cycle

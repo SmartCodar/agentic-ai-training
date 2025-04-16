@@ -10,9 +10,10 @@ This lesson covers Python's flow control structures that allow you to make decis
 - Apply flow control concepts in real-world scenarios
 
 ## Prerequisites
-- Completion of Day 1 (Variables, Data Types, Operators)
-- Basic understanding of Python syntax
+- Understanding of Python variables and data types
+- Basic operators and expressions in Python
 - Python 3.x installed on your computer
+- Basic command line knowledge
 
 ## Time Estimate
 - Reading: 25 minutes

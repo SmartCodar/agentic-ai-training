@@ -11,14 +11,15 @@ Learn how to implement Chain-of-Thought (CoT) prompting to improve LLM reasoning
 - Create reusable CoT templates
 
 ## Prerequisites
-- All previous articles (01-20)
-- Understanding of LLMs (Day 17)
-- Model applications (Day 18)
-- Basic prompt engineering (Day 19)
-- Role-based prompting (Day 20)
+- Strong understanding of prompt engineering
+- Experience with role-based prompting
+- Knowledge of reasoning and logic patterns
+- Familiarity with multi-step problem solving
+- Understanding of LLM capabilities and limitations
 
 ### Technical Requirements
 - Python 3.7+
+- OpenAI API key
 - `openai` package
 - `transformers` library
 - `pydantic` for validation

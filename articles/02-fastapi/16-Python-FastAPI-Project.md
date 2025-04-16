@@ -11,21 +11,14 @@ Build a simple but complete User Management API that demonstrates FastAPI featur
 - Implement logging
 
 ## Prerequisites
-- Completion of [01 - Python Basics](../01-basics/01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [02 - Flow Control](../01-basics/02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [03 - Functions](../01-basics/03-Python-Functions-Modular-Programming.md)
-- Completion of [04 - Modules and Packages](../01-basics/04-Python-Modules-Packages.md)
-- Completion of [05 - Object-Oriented Programming](../01-basics/05-Python-OOP.md)
-- Completion of [06 - File Handling](../01-basics/06-Python-File-Handling.md)
-- Completion of [07 - Testing and Debugging](../01-basics/07-Python-Testing-Debugging.md)
-- Completion of [08 - Functional Programming](../01-basics/08-Python-Functional-Programming.md)
-- Completion of [09 - Project Setup](../01-basics/09-Python-Project-Setup.md)
-- Completion of [10 - Async Programming](10-Python-Async-Programming.md)
-- Completion of [11 - Aiohttp Client](11-Python-Aiohttp-Client.md)
-- Completion of [12 - FastAPI Basics](12-Python-FastAPI.md)
-- Completion of [13 - FastAPI Routes](13-Python-FastAPI-Routes.md)
-- Completion of [14 - Pydantic](14-Python-Pydantic.md)
-- Completion of [15 - FastAPI Mini Project](15-Python-FastAPI-Mini-Project.md)
+- Strong understanding of FastAPI and its ecosystem
+- Experience with RESTful API development
+- Knowledge of database operations and SQLAlchemy
+- Familiarity with authentication and security
+- Understanding of project architecture
+- Experience with testing and debugging
+- Python 3.7+ installed
+- FastAPI and related packages installed
 
 ## Time Estimate
 - Setup: 15 minutes

@@ -11,13 +11,9 @@ This lesson explores functional programming concepts in Python, including lambda
 - Use built-in functional tools (map, filter, reduce)
 
 ## Prerequisites
-- Completion of [01 - Python Basics](01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [02 - Flow Control](02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [03 - Functions](03-Python-Functions-Modular-Programming.md)
-- Completion of [04 - Modules and Packages](04-Python-Modules-Packages.md)
-- Completion of [05 - Object-Oriented Programming](05-Python-OOP.md)
-- Completion of [06 - File Handling](06-Python-File-Handling.md)
-- Completion of [07 - Testing and Debugging](07-Python-Testing-Debugging.md)
+- Understanding of Python variables and data types
+- Knowledge of flow control (if statements, loops)
+- Strong understanding of functions and their usage
 - Python 3.x installed on your computer
 
 ## Time Estimate

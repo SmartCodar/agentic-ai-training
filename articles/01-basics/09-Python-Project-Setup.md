@@ -11,12 +11,10 @@ This lesson covers essential project setup practices in Python, including virtua
 - Implement best practices for Python projects
 
 ## Prerequisites
-- Completion of [01 - Python Basics](01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [02 - Flow Control](02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [03 - Functions](03-Python-Functions-Modular-Programming.md)
-- Completion of [04 - Modules and Packages](04-Python-Modules-Packages.md)
-- Completion of [05 - Object-Oriented Programming](05-Python-OOP.md)
-- Completion of [06 - File Handling](06-Python-File-Handling.md)
+- Understanding of Python fundamentals (variables, functions, OOP)
+- Knowledge of modules and packages
+- Python 3.x installed
+- Basic command line knowledge
 - Completion of [07 - Testing and Debugging](07-Python-Testing-Debugging.md)
 - Completion of [08 - Functional Programming](08-Python-Functional-Programming.md)
 - Python 3.x installed on your computer

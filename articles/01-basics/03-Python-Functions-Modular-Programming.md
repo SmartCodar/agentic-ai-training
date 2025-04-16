@@ -11,8 +11,8 @@ This lesson focuses on functions and modular programming in Python, teaching you
 - Implement error handling in functions
 
 ## Prerequisites
-- Completion of [Python Basics](01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [Flow Control](02-Python-Flow-Control-Loops-Conditions.md)
+- Understanding of Python variables and data types
+- Knowledge of flow control (if statements, loops)
 - Python 3.x installed on your computer
 
 ## Time Estimate

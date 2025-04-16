@@ -11,25 +11,15 @@ Learn about different LLM model families, their architectures, and how to use th
 - Make informed model selection decisions
 
 ## Prerequisites
-- Completion of [01 - Python Basics](../01-basics/01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [02 - Flow Control](../01-basics/02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [03 - Functions](../01-basics/03-Python-Functions-Modular-Programming.md)
-- Completion of [04 - Modules and Packages](../01-basics/04-Python-Modules-Packages.md)
-- Completion of [05 - Object-Oriented Programming](../01-basics/05-Python-OOP.md)
-- Completion of [06 - File Handling](../01-basics/06-Python-File-Handling.md)
-- Completion of [07 - Testing and Debugging](../01-basics/07-Python-Testing-Debugging.md)
-- Completion of [08 - Functional Programming](../01-basics/08-Python-Functional-Programming.md)
-- Completion of [09 - Project Setup](../01-basics/09-Python-Project-Setup.md)
-- Completion of [10 - Async Programming](../02-fastapi/10-Python-Async-Programming.md)
-- Completion of [11 - Aiohttp Client](../02-fastapi/11-Python-Aiohttp-Client.md)
-- Completion of [12 - FastAPI Basics](../02-fastapi/12-Python-FastAPI.md)
-- Completion of [13 - FastAPI Routes](../02-fastapi/13-Python-FastAPI-Routes.md)
-- Completion of [14 - Pydantic](../02-fastapi/14-Python-Pydantic.md)
-- Completion of [15 - FastAPI Mini Project](../02-fastapi/15-Python-FastAPI-Mini-Project.md)
-- Completion of [16 - FastAPI Project](../02-fastapi/16-Python-FastAPI-Project.md)
-- Completion of [17 - LLM Transformers](17-Python-LLM-Transformers.md)
+- Understanding of transformer architecture
+- Knowledge of LLM capabilities and limitations
+- Experience with API authentication and security
+- Familiarity with JSON data handling
+- Understanding of error handling and debugging
+- Python 3.7+ installed
+- Required API keys for chosen LLM providers
 
-### Technical Requirements
+## Technical Requirements
 - Python 3.7+
 - GPU recommended for model inference
 - 16GB+ RAM recommended

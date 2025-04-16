@@ -11,12 +11,10 @@ This lesson covers essential testing and debugging techniques in Python. You'll 
 - Practice test-driven development (TDD)
 
 ## Prerequisites
-- Completion of [01 - Python Basics](01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [02 - Flow Control](02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [03 - Functions](03-Python-Functions-Modular-Programming.md)
-- Completion of [04 - Modules and Packages](04-Python-Modules-Packages.md)
-- Completion of [05 - Object-Oriented Programming](05-Python-OOP.md)
-- Completion of [06 - File Handling](06-Python-File-Handling.md)
+- Understanding of Python variables and data types
+- Knowledge of flow control (if statements, loops)
+- Understanding of functions and their usage
+- Familiarity with Python modules and imports
 - Python 3.x installed on your computer
 
 ## Time Estimate

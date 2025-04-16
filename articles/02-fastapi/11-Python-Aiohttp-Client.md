@@ -12,16 +12,9 @@ This lesson explores aiohttp, a powerful asynchronous HTTP client/server framewo
 - Build practical web scrapers and API clients
 
 ## Prerequisites
-- Completion of [01 - Python Basics](../01-basics/01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [02 - Flow Control](../01-basics/02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [03 - Functions](../01-basics/03-Python-Functions-Modular-Programming.md)
-- Completion of [04 - Modules and Packages](../01-basics/04-Python-Modules-Packages.md)
-- Completion of [05 - Object-Oriented Programming](../01-basics/05-Python-OOP.md)
-- Completion of [06 - File Handling](../01-basics/06-Python-File-Handling.md)
-- Completion of [07 - Testing and Debugging](../01-basics/07-Python-Testing-Debugging.md)
-- Completion of [08 - Functional Programming](../01-basics/08-Python-Functional-Programming.md)
-- Completion of [09 - Project Setup](../01-basics/09-Python-Project-Setup.md)
-- Completion of [10 - Async Programming](10-Python-Async-Programming.md)
+- Understanding of async/await in Python
+- Knowledge of HTTP protocols and requests
+- Familiarity with JSON data handling
 - Python 3.7+ installed
 
 ## Time Estimate

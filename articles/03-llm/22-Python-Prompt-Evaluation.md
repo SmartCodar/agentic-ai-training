@@ -373,3 +373,11 @@ class EvaluationPipeline:
 > **Navigation**
 > - [← Chain-of-Thought Prompting](21-Python-Chain-Of-Thought.md)
 > - [Course Repository →](https://github.com/SmartCodar/agentic-ai-training)
+
+## Prerequisites
+- Strong understanding of prompt engineering techniques
+- Experience with different prompting strategies
+- Knowledge of evaluation metrics and KPIs
+- Familiarity with testing methodologies
+- Python 3.7+ installed
+- OpenAI API key

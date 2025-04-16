@@ -507,6 +507,14 @@ await agent.process("Review this code: def add(a,b): return a+b")
 
 ---
 
+>## Prerequisites
+- Strong understanding of prompt engineering principles
+- Experience with zero-shot and few-shot prompting
+- Knowledge of LLM response patterns
+- Understanding of context and role definition
+- Python 3.7+ installed
+- OpenAI API key
+
 > **Navigation**
 > - [← Prompt Engineering](19-Python-Prompt-Engineering.md)
 > - [Chain of Thought →](21-Python-Chain-Of-Thought.md)

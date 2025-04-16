@@ -11,9 +11,10 @@ Learn the fundamentals of prompt engineering and how to effectively communicate 
 - Reduce hallucinations and improve output quality
 
 ## Prerequisites
-- All previous articles (01-18)
-- Understanding of LLM architectures from Day 17
-- Familiarity with model applications from Day 18
+- Understanding of LLM architectures and capabilities
+- Experience with different LLM applications
+- Knowledge of natural language processing concepts
+- Familiarity with Python string manipulation
 
 ### Technical Requirements
 - Python 3.7+

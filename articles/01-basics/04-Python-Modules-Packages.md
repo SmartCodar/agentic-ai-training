@@ -11,9 +11,9 @@ This lesson explores Python modules and packages, teaching you how to organize, 
 - Use popular third-party packages effectively
 
 ## Prerequisites
-- Completion of [Python Basics](01-Python-Basics-Variables-Types-Operators.md)
-- Completion of [Flow Control](02-Python-Flow-Control-Loops-Conditions.md)
-- Completion of [Functions](03-Python-Functions-Modular-Programming.md)
+- Understanding of Python variables and data types
+- Knowledge of flow control (if statements, loops)
+- Understanding of functions and their usage
 - Python 3.x installed on your computer
 - Basic command line knowledge
 

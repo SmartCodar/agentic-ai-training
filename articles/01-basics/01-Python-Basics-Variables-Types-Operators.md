@@ -10,9 +10,10 @@ This lesson covers fundamental Python concepts that form the building blocks of 
 - Apply Python coding best practices
 
 ## Prerequisites
+- Basic computer literacy
 - Python 3.x installed on your computer
-- Basic understanding of programming concepts
 - A text editor or IDE (VS Code recommended)
+- Basic understanding of what programming is
 
 ## Time Estimate
 - Reading: 20 minutes
