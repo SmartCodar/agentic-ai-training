@@ -10,7 +10,8 @@ Over 90 days, you'll master the complete autonomous agent development lifecycle 
 |--------|---------|-----------|---------------|
 | Python Basics | Core Python, OOP, Testing | Days 1-9 | None |
 | FastAPI | Web Development, APIs | Days 10-16 | Python Basics |
-| LLM Engineering | Transformers, Prompting | Days 17-22 | All Previous |
+| LLM Engineering | Transformers, Prompting | Days 17-31 | Python, FastAPI |
+| LangChain | Agents, Memory, Tools | Days 32-41 | All Previous |
 
 ## 📖 Course Content
 
@@ -48,6 +49,20 @@ Over 90 days, you'll master the complete autonomous agent development lifecycle 
 | 21 | [Chain-of-Thought](articles/03-llm/21-Python-Chain-Of-Thought.md) | Reasoning steps |
 | 22 | [Evaluation](articles/03-llm/22-Python-Prompt-Evaluation.md) | Quality metrics |
 
+### Module 4: LangChain Development
+| Day | Topic | Description |
+|-----|-------|-------------|
+| 32 | [Templates](articles/04-langchain/32-Python-LangChain-Templates.md) | Prompt templates |
+| 33 | [Sequential](articles/04-langchain/33-Python-LangChain-Sequential.md) | Chain sequences |
+| 34 | [Memory](articles/04-langchain/34-Python-LangChain-Memory.md) | Memory systems |
+| 35 | [Agents](articles/04-langchain/35-Python-LangChain-Agents.md) | Agent creation |
+| 36 | [Tools](articles/04-langchain/36-Python-LangChain-Tools.md) | Tool integration |
+| 37 | [Documents](articles/04-langchain/37-Python-LangChain-Documents.md) | Document loading |
+| 38 | [Vectors](articles/04-langchain/38-Python-LangChain-Vectors.md) | Vector stores |
+| 39 | [Retrieval](articles/04-langchain/39-Python-LangChain-Retrieval.md) | RAG systems |
+| 40 | [Output](articles/04-langchain/40-Python-LangChain-Output.md) | Output parsing |
+| 41 | [Summary](articles/04-langchain/41-Python-LangChain-Summary.md) | Module review |
+
 ## 🗂️ Repository Structure
 
 ```
@@ -55,16 +70,23 @@ python-llm-course/
 ├── articles/                  # Course content
 │   ├── 01-basics/            # Days 1-9
 │   ├── 02-fastapi/           # Days 10-16
-│   └── 03-llm/               # Days 17-22
+│   ├── 03-llm/               # Days 17-31
+│   └── 04-langchain/         # Days 32-41
 │
 ├── code/                      # Code examples
 │   ├── basics/               # Python fundamentals
 │   ├── fastapi/              # FastAPI projects
-│   └── llm/                  # LLM implementations
-│       ├── transformers/     # Transformer examples
-│       ├── prompts/          # Prompt engineering
-│       ├── agents/           # Role-based agents
-│       └── evaluation/       # Testing frameworks
+│   ├── llm/                  # LLM implementations
+│   │   ├── transformers/     # Transformer examples
+│   │   ├── prompts/          # Prompt engineering
+│   │   ├── agents/           # Role-based agents
+│   │   └── evaluation/       # Testing frameworks
+│   └── langchain/            # LangChain examples
+│       ├── memory/          # Memory systems
+│       ├── agents/          # Agent implementations
+│       ├── tools/           # Custom tools
+│       ├── retrieval/       # RAG systems
+│       └── parsers/         # Output parsers
 │
 ├── exercises/                 # Practice problems
 │   ├── basic/               
@@ -95,7 +117,8 @@ pip install -r requirements.txt
 2. **Choose Your Path**
 - 🔰 **Beginner**: Start with Module 1 (Days 1-9)
 - 🌐 **Web Developer**: Jump to Module 2 (Days 10-16)
-- 🤖 **AI Engineer**: Focus on Module 3 (Days 17-22)
+- 🤖 **AI Engineer**: Focus on Module 3 (Days 17-31)
+- 🔗 **LangChain Developer**: Dive into Module 4 (Days 32-41)
 
 3. **Learning Tips**
 - Complete exercises in each article
