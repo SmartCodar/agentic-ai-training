@@ -21,12 +21,6 @@ Learn how to create professional API endpoints using FastAPI's powerful routing 
 - Knowledge of path and query parameters
 - Basic understanding of request/response cycle
 
-## Time Estimate
-- Reading: 30 minutes
-- Practice: 45 minutes
-- Exercises: 45 minutes
-
----
 
 ## 1. Path Parameters
 

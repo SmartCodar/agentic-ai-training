@@ -3,6 +3,21 @@
 ## Overview
 Master Python's flow control structures to create dynamic and intelligent programs. Learn how to make decisions, iterate over data, and control program execution flow using Python's elegant syntax and powerful control structures.
 
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Implement conditional logic using if-elif-else statements
+- Write efficient loops using for and while constructs
+- Use pattern matching for elegant control flow (Python 3.11+)
+- Apply loop control statements (break, continue, else)
+- Debug common flow control issues
+
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
+- Understanding of Python variables and operators (Day 1)
+- VS Code with Python extension installed
+- Basic understanding of Boolean logic
+
+
 ## Theoretical Foundation
 
 ### Understanding Flow Control
@@ -29,33 +44,6 @@ Loops automate repetitive tasks and process collections of data:
 3. **Infinite Loops**: Continuous execution until interrupted
 4. **Nested Loops**: Loops within loops for complex patterns
 
-## ⏱️ Time Estimate
-- **Reading**: 30 minutes
-- **Exercises**: 45 minutes
-- **Practice Project**: 30 minutes
-
-## 🎯 Learning Objectives
-By the end of this lesson, you will be able to:
-- Implement conditional logic using if-elif-else statements
-- Write efficient loops using for and while constructs
-- Use pattern matching for elegant control flow (Python 3.11+)
-- Apply loop control statements (break, continue, else)
-- Debug common flow control issues
-
-## 📋 Prerequisites
-- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
-- Understanding of Python variables and operators (Day 1)
-- VS Code with Python extension installed
-- Basic understanding of Boolean logic
-
-## 🛠️ Setup Check
-Run this code to verify your Python installation and features:
-```python
-import sys
-
-print(f"Python Version: {sys.version}")
-print(f"Pattern Matching Available: {sys.version_info >= (3, 10)}")
-```
 
 ---
 
@@ -267,117 +255,6 @@ def suggest_clothing(temperature, is_raining):
 print(suggest_clothing(45, True))   # Cold and rainy
 print(suggest_clothing(75, False))  # Warm and sunny
 ```
-
----
-
-## 3. For Loops
-
-### Explanation
-- Used for **iterating over a sequence** (list, tuple, dictionary, string).
-- Executes a block of code for **each item**.
-
-### Syntax
-```python
-for item in sequence:
-    # code block
-```
-
-### Real-world Applications
-
-#### 1. Data Processing
-```python
-# Calculate average rating for a product
-product_ratings = [4.5, 5.0, 3.5, 4.0, 4.8, 4.2]
-
-def analyze_ratings(ratings):
-    total = 0
-    count = 0
-    
-    for rating in ratings:
-        total += rating
-        count += 1
-    
-    average = total / count
-    return f"Average Rating: {average:.1f} out of 5.0 ({count} reviews)"
-
-print(analyze_ratings(product_ratings))
-```
-
-#### 2. Shopping Cart Total
-```python
-# Calculate cart total with tax
-class CartItem:
-    def __init__(self, name, price, quantity):
-        self.name = name
-        self.price = price
-        self.quantity = quantity
-
-def calculate_cart_total(items, tax_rate=0.08):
-    subtotal = 0
-    print("Shopping Cart Summary:")
-    
-    for item in items:
-        item_total = item.price * item.quantity
-        subtotal += item_total
-        print(f"{item.name}: ${item_total:.2f} (${item.price:.2f} x {item.quantity})") 
-    
-    tax = subtotal * tax_rate
-    total = subtotal + tax
-    
-    print(f"\nSubtotal: ${subtotal:.2f}")
-    print(f"Tax ({tax_rate*100}%): ${tax:.2f}")
-    print(f"Total: ${total:.2f}")
-
-# Test with sample cart
-cart = [
-    CartItem("Laptop", 999.99, 1),
-    CartItem("Mouse", 29.99, 2),
-    CartItem("Keyboard", 59.99, 1)
-]
-
-calculate_cart_total(cart)
-```
-
-#### 3. File Word Counter
-```python
-def count_words(text):
-    # Initialize counters
-    total_words = 0
-    long_words = 0  # words with 5+ characters
-    
-    # Process each line
-    for line in text.split('\n'):
-        # Skip empty lines
-        if not line.strip():
-            continue
-            
-        # Count words in the line
-        words = line.split()
-        total_words += len(words)
-        
-        # Count long words
-        for word in words:
-            if len(word) >= 5:
-                long_words += 1
-    
-    return {
-        'total_words': total_words,
-        'long_words': long_words,
-        'long_word_percentage': (long_words / total_words * 100) if total_words > 0 else 0
-    }
-
-# Test the function
-sample_text = """Python is a versatile programming language.
-It's great for beginners and experts alike.
-Many developers use Python daily."""
-
-stats = count_words(sample_text)
-print(f"Total Words: {stats['total_words']}")
-print(f"Long Words: {stats['long_words']}")
-print(f"Long Word Percentage: {stats['long_word_percentage']:.1f}%")
-```
-
----
 
 ## 2. Loops and Iteration
 
@@ -635,9 +512,114 @@ def get_valid_email():
 # print(f"Validated Email: {email}")
 ```
 
----
+## 3. For Loops
 
-## 5. Best Practices and Code Standards
+### Explanation
+- Used for **iterating over a sequence** (list, tuple, dictionary, string).
+- Executes a block of code for **each item**.
+
+### Syntax
+```python
+for item in sequence:
+    # code block
+```
+
+### Real-world Applications
+
+#### 1. Data Processing
+```python
+# Calculate average rating for a product
+product_ratings = [4.5, 5.0, 3.5, 4.0, 4.8, 4.2]
+
+def analyze_ratings(ratings):
+    total = 0
+    count = 0
+    
+    for rating in ratings:
+        total += rating
+        count += 1
+    
+    average = total / count
+    return f"Average Rating: {average:.1f} out of 5.0 ({count} reviews)"
+
+print(analyze_ratings(product_ratings))
+```
+
+#### 2. Shopping Cart Total
+```python
+# Calculate cart total with tax
+class CartItem:
+    def __init__(self, name, price, quantity):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+def calculate_cart_total(items, tax_rate=0.08):
+    subtotal = 0
+    print("Shopping Cart Summary:")
+    
+    for item in items:
+        item_total = item.price * item.quantity
+        subtotal += item_total
+        print(f"{item.name}: ${item_total:.2f} (${item.price:.2f} x {item.quantity})") 
+    
+    tax = subtotal * tax_rate
+    total = subtotal + tax
+    
+    print(f"\nSubtotal: ${subtotal:.2f}")
+    print(f"Tax ({tax_rate*100}%): ${tax:.2f}")
+    print(f"Total: ${total:.2f}")
+
+# Test with sample cart
+cart = [
+    CartItem("Laptop", 999.99, 1),
+    CartItem("Mouse", 29.99, 2),
+    CartItem("Keyboard", 59.99, 1)
+]
+
+calculate_cart_total(cart)
+```
+
+#### 3. File Word Counter
+```python
+def count_words(text):
+    # Initialize counters
+    total_words = 0
+    long_words = 0  # words with 5+ characters
+    
+    # Process each line
+    for line in text.split('\n'):
+        # Skip empty lines
+        if not line.strip():
+            continue
+            
+        # Count words in the line
+        words = line.split()
+        total_words += len(words)
+        
+        # Count long words
+        for word in words:
+            if len(word) >= 5:
+                long_words += 1
+    
+    return {
+        'total_words': total_words,
+        'long_words': long_words,
+        'long_word_percentage': (long_words / total_words * 100) if total_words > 0 else 0
+    }
+
+# Test the function
+sample_text = """Python is a versatile programming language.
+It's great for beginners and experts alike.
+Many developers use Python daily."""
+
+stats = count_words(sample_text)
+print(f"Total Words: {stats['total_words']}")
+print(f"Long Words: {stats['long_words']}")
+print(f"Long Word Percentage: {stats['long_word_percentage']:.1f}%")
+```
+---
+## 4. Best Practices and Code Standards
 
 ### Conditional Statements Best Practices
 
@@ -771,7 +753,7 @@ pairs = list(combinations(items, 2))
 
 ---
 
-## 6. Hands-on Practice
+## 5. Hands-on Practice
 
 ### Exercise 1: Temperature Converter (Basic)
 ```python
@@ -950,7 +932,7 @@ def number_guessing_game():
 
 ---
 
-## 7. Summary
+## 6. Summary
 
 ### Key Takeaways
 - Conditional statements (`if-else`) enable decision-making in programs

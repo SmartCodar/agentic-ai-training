@@ -7,10 +7,6 @@ Object-Oriented Programming (OOP) enables:
 - Building complex systems from simple objects
 - Implementing design patterns effectively
 
-## ⏱️ Time Estimate
-- **Reading**: 40 minutes
-- **Exercises**: 50 minutes
-- **Practice Project**: 45 minutes
 
 ## 🎯 Learning Objectives
 By the end of this lesson, you will be able to:
@@ -26,18 +22,6 @@ By the end of this lesson, you will be able to:
 - Code editor (VS Code recommended) with Python extension
 - Understanding of functions and modules
 - Basic error handling knowledge
-
-## 🛠️ Setup Check
-Run this code to verify your Python class support:
-```python
-class TestClass:
-    def __init__(self):
-        self.message = "OOP Ready!"
-
-print(f"Python {__import__('sys').version_info[:2]} supports classes: {TestClass().message}")
-```
-
----
 
 ## 1. OOP Fundamentals
 
@@ -914,7 +898,7 @@ def test_ecommerce_system():
 test_ecommerce_system()
 ```
 
-## 6. Knowledge Check ✅
+## 7. Knowledge Check ✅
 
 1. What is the difference between a class and an object?
 2. How does inheritance promote code reuse?
@@ -925,7 +909,7 @@ test_ecommerce_system()
 7. How do you implement method overriding in Python?
 8. What is the role of the `super()` function?
 
-## 7. Summary
+## 8. Summary
 
 ### Key Takeaways
 - Classes provide blueprints for creating objects

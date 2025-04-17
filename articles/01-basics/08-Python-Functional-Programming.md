@@ -7,11 +7,6 @@ Functional programming in Python enables you to:
 - Process data efficiently with built-in tools
 - Implement elegant solutions to complex problems
 
-## ⏱️ Time Estimate
-- **Reading**: 40 minutes
-- **Exercises**: 50 minutes
-- **Practice Project**: 45 minutes
-
 ## 🎯 Learning Objectives
 By the end of this lesson, you will be able to:
 - Create and use lambda functions effectively
@@ -26,31 +21,6 @@ By the end of this lesson, you will be able to:
 - Code editor (VS Code recommended) with Python extension
 - Strong understanding of functions (Day 3)
 - Basic knowledge of error handling
-
-## 🛠️ Setup Check
-Run this code to verify your functional programming setup:
-```python
-from functools import reduce
-from typing import Callable
-
-# Test lambda function
-square = lambda x: x**2
-
-# Test map and filter
-numbers = [1, 2, 3, 4, 5]
-mapped = list(map(square, numbers))
-filtered = list(filter(lambda x: x % 2 == 0, numbers))
-
-# Test reduce
-sum_all = reduce(lambda x, y: x + y, numbers)
-
-print(f"Lambda function: square(5) = {square(5)}")
-print(f"Map result: {mapped}")
-print(f"Filter result: {filtered}")
-print(f"Reduce result: {sum_all}")
-```
-
----
 
 ## 1. Lambda Functions
 

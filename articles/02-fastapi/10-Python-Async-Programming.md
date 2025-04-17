@@ -20,43 +20,6 @@ This lesson explores asynchronous programming in Python using async/await and ev
 - Completion of [08 - Functional Programming](../01-basics/08-Python-Functional-Programming.md)
 - Completion of [09 - Project Setup](../01-basics/09-Python-Project-Setup.md)
 
-## Time Estimate
-- Reading: 45 minutes
-- Practice: 60 minutes
-- Exercises: 45 minutes
-
-## ⚙️ Setup Check
-```python
-import sys
-import asyncio
-
-async def check_async_support():
-    try:
-        # Check Python version
-        print(f"Python version: {sys.version_info.major}.{sys.version_info.minor}")
-        if sys.version_info < (3, 7):
-            print("Warning: Python 3.7+ recommended for full async support")
-        
-        # Verify asyncio
-        await asyncio.sleep(0.1)
-        print("Asyncio working correctly")
-        
-        # Check event loop
-        loop = asyncio.get_running_loop()
-        print("Event loop available")
-        
-        return True
-    except Exception as e:
-        print(f"Setup check failed: {e}")
-        return False
-
-# Run setup check
-if __name__ == "__main__":
-    asyncio.run(check_async_support())
-```
-
----
-
 ## 1. Understanding Asynchronous Programming
 
 ### Synchronous vs Asynchronous
@@ -293,8 +256,6 @@ async def safe_operation():
         print(f"Unexpected error: {e}")
     return None
 ```
-
-## Summary
 
 ## 5. Practical Exercises 🔨
 

@@ -20,13 +20,6 @@ Build a simple but complete User Management API that demonstrates FastAPI featur
 - Python 3.7+ installed
 - FastAPI and related packages installed
 
-## Time Estimate
-- Setup: 15 minutes
-- Implementation: 45 minutes
-- Testing: 15 minutes
-
----
-
 ## 1. Project Setup
 
 ### Project Structure
@@ -282,8 +275,6 @@ curl -X DELETE "http://localhost:8000/users/1"
 2. Implement real database
 3. Add more validation
 4. Enhance error handling
-
-## Summary
 
 ### Key Takeaways
 1. Project structure is crucial for maintainability

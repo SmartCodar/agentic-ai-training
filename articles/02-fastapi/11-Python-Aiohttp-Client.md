@@ -15,46 +15,8 @@ This lesson explores aiohttp, a powerful asynchronous HTTP client/server framewo
 - Understanding of async/await in Python
 - Knowledge of HTTP protocols and requests
 - Familiarity with JSON data handling
-- Python 3.7+ installed
+- Python 3.11+ installed
 
-## Time Estimate
-- Reading: 40 minutes
-- Practice: 60 minutes
-- Projects: 50 minutes
-
-## ⚙️ Setup Check
-```python
-import sys
-import asyncio
-import aiohttp
-
-async def check_aiohttp_setup():
-    try:
-        # Check Python version
-        print(f"Python version: {sys.version_info.major}.{sys.version_info.minor}")
-        if sys.version_info < (3, 7):
-            print("Warning: Python 3.7+ recommended for full async support")
-        
-        # Verify aiohttp
-        print(f"aiohttp version: {aiohttp.__version__}")
-        
-        # Test basic request
-        async with aiohttp.ClientSession() as session:
-            async with session.get('https://httpbin.org/get') as response:
-                print(f"Test request status: {response.status}")
-                print("aiohttp working correctly")
-        
-        return True
-    except Exception as e:
-        print(f"Setup check failed: {e}")
-        return False
-
-# Run setup check
-if __name__ == "__main__":
-    asyncio.run(check_aiohttp_setup())
-```
-
----
 
 ## 1. Getting Started with Aiohttp
 

@@ -7,11 +7,6 @@ File handling in Python enables you to:
 - Handle file operations safely and efficiently
 - Manage file system operations
 
-## ⏱️ Time Estimate
-- **Reading**: 35 minutes
-- **Exercises**: 45 minutes
-- **Practice Project**: 40 minutes
-
 ## 🎯 Learning Objectives
 By the end of this lesson, you will be able to:
 - Implement basic file operations (read, write, append)
@@ -27,23 +22,6 @@ By the end of this lesson, you will be able to:
 - Understanding of functions and error handling
 - Basic knowledge of data structures
 
-## 🛠️ Setup Check
-Run this code to verify your file handling setup:
-```python
-from pathlib import Path
-
-test_file = Path('test.txt')
-with open(test_file, 'w') as f:
-    f.write('File handling ready!')
-    
-with open(test_file, 'r') as f:
-    content = f.read()
-    print(f"File operations working: {content}")
-
-test_file.unlink()  # Clean up
-```
-
----
 
 ## 1. Text File Operations
 
@@ -433,7 +411,7 @@ def demonstrate_safe_operations():
 demonstrate_safe_operations()
 ```
 
-## 6. Knowledge Check ✅
+## 5. Knowledge Check ✅
 
 1. What is the difference between 'r', 'w', and 'a' file modes?
 2. Why should you use context managers (`with` statement) for file operations?
@@ -444,7 +422,7 @@ demonstrate_safe_operations()
 7. How do you handle file encoding issues?
 8. What are the best practices for error handling in file operations?
 
-## 7. Summary
+## 6. Summary
 
 ### Key Takeaways
 - Always use context managers for safe file handling

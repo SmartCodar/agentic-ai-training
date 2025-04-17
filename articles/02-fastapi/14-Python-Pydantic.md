@@ -22,13 +22,6 @@ Master Pydantic's powerful data validation and schema management capabilities fo
 - Knowledge of data validation concepts
 - Basic understanding of JSON schemas
 
-## Time Estimate
-- Reading: 30 minutes
-- Practice: 45 minutes
-- Exercises: 45 minutes
-
----
-
 ## 1. Pydantic Basics
 
 ### Core Concepts

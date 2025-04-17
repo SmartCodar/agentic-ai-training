@@ -16,13 +16,6 @@ Build a simple Todo API using FastAPI to practice the core concepts learned so f
 - Familiarity with HTTP methods
 - Python 3.11+ installed
 
-## Time Estimate
-- Setup: 10 minutes
-- Implementation: 30 minutes
-- Testing: 20 minutes
-
----
-
 ## 1. Project Setup
 
 ### Create Project Structure

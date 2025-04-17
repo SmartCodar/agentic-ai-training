@@ -7,11 +7,6 @@ Testing and debugging in Python enables you to:
 - Ensure code quality through automated testing
 - Track and resolve issues systematically
 
-## ⏱️ Time Estimate
-- **Reading**: 35 minutes
-- **Exercises**: 55 minutes
-- **Practice Project**: 45 minutes
-
 ## 🎯 Learning Objectives
 By the end of this lesson, you will be able to:
 - Write and run unit tests using pytest
@@ -26,25 +21,6 @@ By the end of this lesson, you will be able to:
 - Code editor (VS Code recommended) with Python extension
 - Understanding of functions and OOP concepts
 - Basic knowledge of exceptions and errors
-
-## 🛠️ Setup Check
-Run this code to verify your testing environment:
-```python
-import pytest
-import logging
-import pdb
-
-def test_setup():
-    assert True, "pytest is working!"
-
-logging.basicConfig(level=logging.INFO)
-logging.info("Logging is configured!")
-
-print(f"Python debugger available: {hasattr(pdb, 'set_trace')}")
-print(f"Pytest version: {pytest.__version__}")
-```
-
----
 
 ## 1. Unit Testing with pytest
 
@@ -406,7 +382,7 @@ class TestEcommerceSystem:
 - Fail fast and explicitly
 - Don't catch generic exceptions
 
-## 6. Knowledge Check ✅
+## 8. Knowledge Check ✅
 
 1. What are the key differences between unit tests and integration tests?
 2. How do you use pytest fixtures and why are they useful?
@@ -417,7 +393,7 @@ class TestEcommerceSystem:
 7. What are mocks and when should you use them in testing?
 8. How do you profile Python code for performance issues?
 
-## 7. Summary
+## 9. Summary
 
 ### Key Takeaways
 - Write tests before implementing features (TDD)

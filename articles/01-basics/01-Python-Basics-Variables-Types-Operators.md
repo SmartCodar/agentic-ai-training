@@ -3,6 +3,19 @@
 ## Overview
 Master the foundational elements of Python programming. This comprehensive lesson covers Python's core building blocks: variables, data types, and operators. You'll learn how to write clean, efficient code following industry best practices and PEP 8 standards.
 
+## 🎯 Learning Objectives
+By the end of this lesson, you will be able to:
+- Create and manage variables following Python naming conventions
+- Work with Python's core data types (int, float, str, bool, list, dict)
+- Apply arithmetic, comparison, and logical operators effectively
+- Implement Python coding best practices and PEP 8 standards
+- Debug common variable and data type issues
+
+## 📋 Prerequisites
+- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
+- Code editor (VS Code recommended) with Python extension
+- Basic understanding of programming concepts
+
 ## Theoretical Foundation
 
 ### What is Python?
@@ -47,47 +60,6 @@ Before diving into the practical aspects, let's understand the three fundamental
    - Transform and combine data
    - Control program flow
    - Follow specific precedence rules
-
-## ⏱️ Time Estimate
-- **Reading**: 30 minutes
-- **Exercises**: 45 minutes
-- **Practice Project**: 30 minutes
-
-## 🎯 Learning Objectives
-By the end of this lesson, you will be able to:
-- Create and manage variables following Python naming conventions
-- Work with Python's core data types (int, float, str, bool, list, dict)
-- Apply arithmetic, comparison, and logical operators effectively
-- Implement Python coding best practices and PEP 8 standards
-- Debug common variable and data type issues
-
-## 📋 Prerequisites
-- Python 3.11+ installed ([Download Python](https://www.python.org/downloads/))
-- Code editor (VS Code recommended) with Python extension
-- Basic understanding of programming concepts
-
-## 🛠️ Setup Check
-Run this code to verify your Python installation:
-```python
-print(f"Python Version: {__import__('sys').version}")
-```
-
-## Learning Objectives
-- Master Python variable creation and naming conventions
-- Understand and work with different Python data types
-- Learn to use basic Python operators
-- Apply Python coding best practices
-
-## Prerequisites
-- Basic computer literacy
-- Python 3.x installed on your computer
-- A text editor or IDE (VS Code recommended)
-- Basic understanding of what programming is
-
-## Time Estimate
-- Reading: 20 minutes
-- Practice: 40 minutes
-- Assignments: 30 minutes
 
 ---
 
@@ -193,9 +165,9 @@ print(f"Total inventory value: ${inventory_value}")
 
 ---
 
-## 2. Python Data Types
+## 3. Python Data Types
 
-### 2.1 Core Data Types Overview
+### 3.1 Core Data Types Overview
 | Type    | Example               | Mutability | Use Case                         |
 |---------|-----------------------|------------|----------------------------------|
 | `int`   | `5`, `-10`, `0`       | Immutable  | Counting, indexing, math         |
@@ -207,7 +179,7 @@ print(f"Total inventory value: ${inventory_value}")
 | `dict`  | `{"name": "John"}`   | Mutable    | Key-value mapping, JSON data     |
 | `set`   | `{1, 2, 3}`           | Mutable    | Unique items, fast lookups       |
 
-### 2.2 Working with Numbers
+### 3.2 Working with Numbers
 ```python
 # Integer operations
 age = 25
@@ -226,7 +198,7 @@ from decimal import Decimal
 total = Decimal('19.99') * Decimal('0.15')  # Precise decimal calculations
 ```
 
-### 2.3 String Operations
+### 3.3 String Operations
 ```python
 # String creation and formatting
 name = 'Alice'
@@ -245,7 +217,7 @@ doc = """This is a
     preserves formatting."""
 ```
 
-### 2.4 Collections
+### 3.4 Collections
 ```python
 # List operations
 fruits = ['apple', 'banana', 'orange']
@@ -277,7 +249,7 @@ common_users = valid_users & active_users  # Intersection
 all_users = valid_users | active_users     # Union
 ```
 
-### 2.5 Type Conversion
+### 3.5 Type Conversion
 ```python
 # Explicit type conversion
 num_str = "123"
@@ -331,9 +303,9 @@ print(f"Unique Tags: {post_tags}")
 
 ---
 
-## 3. Python Operators
+## 4. Python Operators
 
-### 3.1 Arithmetic Operators
+### 4.1 Arithmetic Operators
 ```python
 # Basic arithmetic
 a, b = 10, 3
@@ -359,7 +331,7 @@ discount_amount = price * (discount_percent / 100)
 final_price = price - discount_amount
 ```
 
-### 3.2 Comparison Operators
+### 4.2 Comparison Operators
 ```python
 # Basic comparisons
 x, y = 5, 7
@@ -382,7 +354,7 @@ is_adult = age >= 18     # True
 can_vote = age >= 18     # True
 ```
 
-### 3.3 Logical Operators
+### 4.3 Logical Operators
 ```python
 # Basic logical operations
 is_valid = True
@@ -406,7 +378,7 @@ can_view_admin = has_account and is_logged_in and is_admin  # False
 can_view_content = has_account and (is_logged_in or is_admin)  # True
 ```
 
-### 3.4 Bitwise Operators
+### 4.4 Bitwise Operators
 ```python
 # Bitwise operations
 a = 0b1100  # 12 in binary
@@ -433,7 +405,7 @@ can_write = permissions & WRITE == WRITE  # True
 can_exec = permissions & EXEC == EXEC     # False
 ```
 
-### 3.5 Identity and Membership Operators
+### 4.5 Identity and Membership Operators
 ```python
 # Identity operators
 list1 = [1, 2, 3]
@@ -666,6 +638,14 @@ You are now ready to move to control structures in Python (if-else, loops)!
 
 ---
 
+## 🔍 Common Issues and Solutions
+| Issue | Solution |
+|-------|----------|
+| `NameError: name 'x' is not defined` | Ensure variable is defined before use |
+| `TypeError: can only concatenate str (not "int") to str` | Convert numbers to strings when concatenating |
+| `SyntaxError: invalid syntax` | Check for missing quotes or parentheses |
+| `IndentationError` | Use consistent indentation (4 spaces recommended) |
+
 ## 📚 Additional Resources
 - [Python Official Documentation - Built-in Types](https://docs.python.org/3/library/stdtypes.html)
 - [PEP 8 Style Guide](https://peps.python.org/pep-0008/)
@@ -678,14 +658,6 @@ You are now ready to move to control structures in Python (if-else, loops)!
 3. How does Python's dynamic typing differ from static typing?
 4. When should you use a tuple instead of a list?
 5. What are the benefits of using f-strings for string formatting?
-
-## 🔍 Common Issues and Solutions
-| Issue | Solution |
-|-------|----------|
-| `NameError: name 'x' is not defined` | Ensure variable is defined before use |
-| `TypeError: can only concatenate str (not "int") to str` | Convert numbers to strings when concatenating |
-| `SyntaxError: invalid syntax` | Check for missing quotes or parentheses |
-| `IndentationError` | Use consistent indentation (4 spaces recommended) |
 
 > **Navigation**
 > - [← Course Overview](../README.md)

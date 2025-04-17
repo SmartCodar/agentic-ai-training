@@ -15,12 +15,6 @@ This lesson focuses on functions and modular programming in Python, teaching you
 - Completion of [Flow Control](02-Python-Flow-Control-Loops-Conditions.md)
 - Python 3.x installed on your computer
 
-## Time Estimate
-- Reading: 30 minutes
-- Practice: 45 minutes
-- Assignments: 40 minutes
-
----
 
 ## 1. Introduction to Functions
 
@@ -264,65 +258,6 @@ def test_file_processor():
 # test_file_processor()
 ```
 
----
-
-## 1. Introduction to Functions
-
-### What is a Function?
-- A function is a reusable block of code that performs a specific task
-- It helps avoid code duplication and makes programs more organized
-- Functions can take inputs (parameters) and return outputs
-
-### Basic Function Syntax
-```python
-def function_name(parameter1, parameter2, ...):
-    """Docstring explaining what the function does"""
-    # Function body
-    # Code to be executed
-    return result  # Optional return statement
-```
-
-### Simple Function Examples
-```python
-# Function without parameters
-def greet():
-    """Print a simple greeting"""
-    print("Hello, World!")
-
-# Function with parameters
-def personalized_greet(name):
-    """Print a personalized greeting"""
-    print(f"Hello, {name}!")
-
-# Function with return value
-def add_numbers(a, b):
-    """Add two numbers and return the result"""
-    return a + b
-
-# Test the functions
-greet()  # Output: Hello, World!
-personalized_greet("Alice")  # Output: Hello, Alice!
-result = add_numbers(5, 3)
-print(result)  # Output: 8
-```
-
-### Function Parameters
-```python
-# Default parameters
-def greet_with_title(name, title="Mr."):
-    print(f"Hello, {title} {name}")
-
-# Keyword arguments
-def display_info(name, age, city):
-    print(f"{name} is {age} years old and lives in {city}")
-
-# Test the functions
-greet_with_title("Smith")  # Uses default title
-greet_with_title("Johnson", "Dr.")  # Overrides default title
-
-# Using keyword arguments (order doesn't matter)
-display_info(age=30, city="New York", name="Alice")
-```
 
 ## 4. Best Practices and Code Standards
 
