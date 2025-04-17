@@ -16,7 +16,7 @@ Learn how to create professional API endpoints using FastAPI's powerful routing 
 - Knowledge of HTTP methods (GET, POST, etc.)
 - Familiarity with API endpoints and routing
 - Understanding of request/response cycles
-- Python 3.7+ installed
+- Python 3.11+ installed
 - Understanding of HTTP methods (GET, POST, PUT, DELETE)
 - Knowledge of path and query parameters
 - Basic understanding of request/response cycle

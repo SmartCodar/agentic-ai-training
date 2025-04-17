@@ -18,7 +18,7 @@ Master OpenAI's GPT-4 API integration, from setup to advanced usage. Learn to le
 - Understanding of JSON and structured data
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - OpenAI account
 - `openai` package installed
 - OpenAI API key

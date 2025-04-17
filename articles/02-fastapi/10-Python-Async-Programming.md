@@ -15,7 +15,7 @@ This lesson explores asynchronous programming in Python using async/await and ev
 - Strong understanding of Python fundamentals
 - Knowledge of functions and error handling
 - Understanding of basic threading concepts
-- Python 3.7+ installed
+- Python 3.11+ installed
 - Completion of [07 - Testing and Debugging](../01-basics/07-Python-Testing-Debugging.md)
 - Completion of [08 - Functional Programming](../01-basics/08-Python-Functional-Programming.md)
 - Completion of [09 - Project Setup](../01-basics/09-Python-Project-Setup.md)

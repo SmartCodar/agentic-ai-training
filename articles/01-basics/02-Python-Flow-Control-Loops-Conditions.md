@@ -150,7 +150,7 @@ print(process_event(event))     # "User user123 logged in"
 
 ### 1.3 Advanced Conditionals
 ```python
-# Walrus operator (Python 3.8+)
+# Walrus operator (Python 3.11+)
 def process_data(data: list) -> tuple:
     if (n := len(data)) > 10:
         return data[:10], n

@@ -20,7 +20,7 @@ Before starting this project, ensure you have:
 - Basic understanding of content generation
 
 ### ⚙️ Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - FastAPI and Uvicorn
 - OpenAI API key
 - VS Code or similar IDE

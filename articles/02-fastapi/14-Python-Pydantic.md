@@ -16,7 +16,7 @@ Master Pydantic's powerful data validation and schema management capabilities fo
 - Knowledge of Python data types and type hints
 - Familiarity with data validation concepts
 - Understanding of Python classes and inheritance
-- Python 3.7+ installed
+- Python 3.11+ installed
 - FastAPI and Pydantic installed
 - Understanding of Python type hints
 - Knowledge of data validation concepts

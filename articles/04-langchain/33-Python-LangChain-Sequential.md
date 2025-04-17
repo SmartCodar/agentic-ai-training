@@ -18,7 +18,7 @@ Before starting this lesson, ensure you have:
 - Knowledge of JSON/dict handling
 
 ### ⚙️ Technical Requirements
-- Python 3.8+
+- Python 3.11+
 - LangChain library
 - OpenAI or Gemini API key
 - Development environment setup

@@ -122,7 +122,7 @@ def complex_calculation(data):
 def process_data(items):
     results = []
     for item in items:
-        breakpoint()  # Python 3.7+ debugging
+        breakpoint()  # Python 3.11+ debugging
         processed = item.strip().lower()
         if processed:
             results.append(processed)

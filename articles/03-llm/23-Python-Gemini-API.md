@@ -18,7 +18,7 @@ Learn how to use Google's Gemini, a powerful multimodal LLM, through its API and
 - Understanding of multimodal data handling
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - Google Cloud account
 - `google-generativeai` package
 - Gemini API key

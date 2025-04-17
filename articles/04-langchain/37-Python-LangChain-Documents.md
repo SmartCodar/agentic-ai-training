@@ -18,7 +18,7 @@ Before starting this lesson, ensure you have:
 - Experience with async operations
 
 ### ⚙️ Technical Requirements
-- Python 3.8+
+- Python 3.11+
 - LangChain library
 - Document processing libraries (PyPDF2, docx2txt)
 - Development environment setup

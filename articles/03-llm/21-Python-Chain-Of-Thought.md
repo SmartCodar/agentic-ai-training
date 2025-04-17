@@ -18,7 +18,7 @@ Learn how to implement Chain-of-Thought (CoT) prompting to improve LLM reasoning
 - Understanding of LLM capabilities and limitations
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - OpenAI API key
 - `openai` package
 - `transformers` library

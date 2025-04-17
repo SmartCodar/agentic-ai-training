@@ -18,7 +18,7 @@ Learn to build advanced LLM chains using Google's Gemini API. Create efficient, 
 - Understanding of prompt engineering
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - FastAPI and Uvicorn
 - `google-generativeai` package
 - Gemini API key

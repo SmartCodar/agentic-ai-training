@@ -18,7 +18,7 @@ Before starting this lesson, ensure you have:
 - Knowledge of document processing
 
 ### ⚙️ Technical Requirements
-- Python 3.8+
+- Python 3.11+
 - LangChain library
 - Vector store (Chroma, FAISS)
 - Development environment setup

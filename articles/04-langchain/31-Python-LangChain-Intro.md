@@ -18,7 +18,7 @@ Before starting this lesson, make sure you have:
 - Basic knowledge of prompt engineering
 
 ### ⚙️ Technical Requirements
-- Python 3.8+
+- Python 3.11+
 - LangChain package
 - OpenAI or Gemini API key
 - VS Code or similar IDE

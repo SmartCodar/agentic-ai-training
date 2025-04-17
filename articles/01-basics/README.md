@@ -26,7 +26,7 @@ Core Python programming concepts and best practices.
 ## Prerequisites
 - Basic computer knowledge
 - Text editor or IDE installed
-- Python 3.7+ installed
+- Python 3.11+ installed
 
 ## Time Commitment
 - Reading: 30 mins/article

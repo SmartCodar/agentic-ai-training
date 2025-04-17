@@ -20,7 +20,7 @@ Before starting this lesson, make sure you have:
 - Basic knowledge of security concepts
 
 ### ⚙️ Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - Any LLM API (GPT-4 or Gemini)
 - `pydantic` for validation
 - Testing framework (pytest)

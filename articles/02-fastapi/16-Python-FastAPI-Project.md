@@ -17,7 +17,7 @@ Build a simple but complete User Management API that demonstrates FastAPI featur
 - Familiarity with authentication and security
 - Understanding of project architecture
 - Experience with testing and debugging
-- Python 3.7+ installed
+- Python 3.11+ installed
 - FastAPI and related packages installed
 
 ## 1. Project Setup

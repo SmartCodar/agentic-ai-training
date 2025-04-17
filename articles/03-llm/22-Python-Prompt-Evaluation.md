@@ -19,7 +19,7 @@ Learn how to evaluate and improve LLM outputs using systematic evaluation framew
 - Chain-of-thought prompting (Day 21)
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - `openai` package
 - `transformers` library
 - `nltk` for text analysis
@@ -379,5 +379,5 @@ class EvaluationPipeline:
 - Experience with different prompting strategies
 - Knowledge of evaluation metrics and KPIs
 - Familiarity with testing methodologies
-- Python 3.7+ installed
+- Python 3.11+ installed
 - OpenAI API key

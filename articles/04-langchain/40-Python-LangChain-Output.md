@@ -18,7 +18,7 @@ Before starting this lesson, ensure you have:
 - Knowledge of error handling
 
 ### ⚙️ Technical Requirements
-- Python 3.8+
+- Python 3.11+
 - LangChain library
 - Pydantic library
 - Development environment setup

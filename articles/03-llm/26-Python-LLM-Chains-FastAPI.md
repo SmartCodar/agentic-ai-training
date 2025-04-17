@@ -18,7 +18,7 @@ Learn to build production-ready LLM chains using FastAPI. Create a multi-step pi
 - Understanding of API design
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - FastAPI and Uvicorn
 - OpenAI/Google AI SDK
 - API keys for chosen LLM

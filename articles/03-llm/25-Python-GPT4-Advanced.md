@@ -18,7 +18,7 @@ Master advanced GPT-4 programming techniques, from setup to production-ready imp
 - Understanding of prompt engineering basics
 
 ### Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - OpenAI account
 - `openai` package
 - OpenAI API key

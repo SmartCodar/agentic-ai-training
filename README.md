@@ -128,7 +128,7 @@ pip install -r requirements.txt
 ## 🛠️ Technical Requirements
 
 ### Python Environment
-- Python 3.7+
+- Python 3.11+
 - Virtual environment (venv or conda)
 - IDE with Python support (VS Code recommended)
 

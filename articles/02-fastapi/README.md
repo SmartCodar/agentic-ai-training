@@ -25,7 +25,7 @@ Modern web development with FastAPI framework.
 - Module 1 completed
 - Understanding of HTTP
 - Basic API concepts
-- Python 3.7+
+- Python 3.11+
 
 ## Time Commitment
 - Reading: 30 mins/article

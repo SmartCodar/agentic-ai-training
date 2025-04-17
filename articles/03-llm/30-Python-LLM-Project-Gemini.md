@@ -20,7 +20,7 @@ Before starting this project, ensure you have:
 - Basic content generation concepts
 
 ### ⚙️ Technical Requirements
-- Python 3.7+
+- Python 3.11+
 - FastAPI and Uvicorn
 - `google-generativeai` package
 - Gemini API key
